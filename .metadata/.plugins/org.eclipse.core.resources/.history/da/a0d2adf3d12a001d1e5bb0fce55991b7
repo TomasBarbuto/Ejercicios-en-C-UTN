@@ -1,0 +1,13 @@
+int validarFlotante(float numero, int* pResultado) {
+
+	float numero;
+
+	if(pResultado != NULL){
+		scanf("%f", numero);
+	}else{
+		printf("El numero no es flotante");
+	}
+
+	return 0;
+}
+

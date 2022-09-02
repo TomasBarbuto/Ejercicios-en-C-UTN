@@ -1,0 +1,57 @@
+/*
+ ============================================================================
+ Name        : 2.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	//Declaracion.
+	int valorIngresado;
+	int contadorPares;
+	int contadorImpares;
+	int menorNumeroIngresado;
+	int sumaPositivos;
+	int productoNegativos;
+	int parMayor;
+	int i;
+
+	//Asignacion.
+	contadorPares = 0;
+	contadorImpares = 0;
+	sumaPositivos = 0;
+	productoNegativos = 0;
+
+	//Interacion.
+
+	for (i = 0; i < 10; i++) {
+
+		do {
+		printf("Ingrese un numero distinto de 0 \n");
+		scanf("%d", &valorIngresado);
+
+		}while(valorIngresado == 0)
+
+}
+
+return EXIT_SUCCESS;
+}
+
+/*
+ Ejercicio 2-2:
+ Ingresar 10 números enteros, distintos de cero. Mostrar:
+ Cantidad de pares e impares.
+ El menor número ingresado.
+ De los pares el mayor número ingresado.
+ Suma de los positivos.
+ Producto de los negativos.
+ *
+ */

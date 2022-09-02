@@ -1,0 +1,32 @@
+/*
+Ejercicio 2-4:
+Ingresar 5 caracteres e informar cuantas letras p (minúsculas) se ingresaron.
+
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	char letras;
+	int contadorLetraP;
+	int i;
+
+	for(i = 0 ; i < 5 ; i++){
+
+		printf("Ingresa una letra: ");
+		scanf("%c", &letras);
+
+		if(letras == 'p'){
+			contadorLetraP++;
+		}
+
+	if(contadorLetraP > 0){
+		printf("La cantidad de p minusculas son: %d", contadorLetraP);
+	}else{
+		printf("No se ingresaron p minusculas");
+	}
+	return EXIT_SUCCESS;
+}

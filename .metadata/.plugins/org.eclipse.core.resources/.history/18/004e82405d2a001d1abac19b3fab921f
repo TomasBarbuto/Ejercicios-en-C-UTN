@@ -1,0 +1,13 @@
+float validarFlotante(float numero) {
+
+	int retorno = -1;
+
+	if (numero > 0 && numero < 1) {
+		retorno = 0;
+
+	}
+	printf("El numero ingresado es: %f", numero);
+
+	return retorno;
+}
+

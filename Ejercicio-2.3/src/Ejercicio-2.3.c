@@ -1,0 +1,149 @@
+/*
+Ejercicio 2-3:
+Debemos alquilar el servicio de transporte para llegar a Mar del Plata con un grupo de personas
+(no más de 100), de cada persona debemos obtener los siguientes datos:
+número de cliente,
+estado civil ('s' para soltero", 'c' para casado o 'v' viudo),
+edad( solo mayores de edad, más de 17),
+temperatura corporal (validar por favor)
+y genero('f' para femenino, 'm' para masculino, 'o' para no binario).
+NOTA: El precio por pasajero es de $600.
+Se debe informar (solo si corresponde):
+a) La cantidad de personas con estado  civil "viudo" de más de 60 años.
+b) el número de cliente y edad de la mujer soltera más joven.
+c) cuánto sale el viaje total sin descuento.
+d) si hay más del 50% de los pasajeros que tiene más de 60 años ,
+el precio final tiene un descuento del 25%, que solo mostramos si corresponde.
+*/
+#include <stdio.h>
+#include <stdlib.h>
+#define PRECIO_POR_PASAJERO 600
+int main(void){
+	setbuf(stdout, NULL);
+
+	char condicionDeSalida;
+	int i = 0;
+	int numeroDeCliente;
+	char estadoCivil;
+	int edad;
+	int temperaturaCorporal;
+	char genero;
+	//const PRECIO_POR_PASAJERO = 600;
+	//A)
+	int contadorViudosMasDe60 = 0;
+	//B)
+	int flag = 0;
+	int edadMujerSolteraMasJoven;
+	int numeroMujerSolteraMasJoven;
+	//C)
+	int viajeTotalSinDescuento;
+	//D)
+	int viajeConDescuento;
+	int contadorMayorDe60 = 0;
+	int porcentajeMayoresDe60;
+
+
+	do
+	{
+
+
+		printf("Ingresar numero de cliente: ");
+		fflush(stdin);
+		scanf("%d", &numeroDeCliente);
+
+		do
+		{
+			printf("\nIngresar estado civil,(s) para soltero, (c) para casado o (v) viudo: ");
+			fflush(stdin);
+			scanf("%c", &estadoCivil);
+		}while(!(estadoCivil == 's' || estadoCivil == 'c' || estadoCivil == 'v'));
+
+		do
+		{
+			printf("\nIngresar edad del pasajero, solo mayores de edad, más de 17: ");
+			scanf("%d", &edad);
+		}while(!(edad > 17));
+
+		do
+		{
+
+			printf("\nIngresar temperatura corporal del pasajero: ");
+			fflush(stdin);
+			scanf("%d", &temperaturaCorporal);
+		}while(!(temperaturaCorporal > 34));
+
+		do
+		{
+
+
+			printf("\nIngresar el genero del pasajero, (f) para femenino, (m) para masculino, (o) para no binario: ");
+			fflush(stdin);
+			scanf("%c", &genero);
+	    }while(!(genero == 'f' || genero == 'm' || genero == 'o'));
+
+
+
+		if(estadoCivil == 'v' && edad > 60)
+		{
+			contadorViudosMasDe60++;
+		}
+
+	    if(genero == 'f' && estadoCivil == 's')
+		  if(flag == 0 || edadMujerSolteraMasJoven > edad)
+		  {
+		     edadMujerSolteraMasJoven = edad;
+		     numeroMujerSolteraMasJoven = numeroDeCliente;
+			 flag = 1;
+		  }
+
+	    if(edad > 60)
+	    {
+	    	contadorMayorDe60++;
+	    }
+
+
+		printf("\nDesea seguir ingresando pasajeros (s) o (n)?");
+		fflush(stdin);
+		scanf("%c", &condicionDeSalida);
+		i++;
+	}while(condicionDeSalida == 's' && i <= 100);
+
+	 viajeTotalSinDescuento = PRECIO_POR_PASAJERO * i;
+	 porcentajeMayoresDe60 = (contadorMayorDe60 * 100) / i;
+
+	//a) La cantidad de personas con estado  civil "viudo" de más de 60 años.
+		if(contadorViudosMasDe60 > 0)
+		{
+			printf("La cantidad de personas con estado  civil (viudo) de más de 60 años es: %d \n", contadorViudosMasDe60);
+		}else
+		{
+			printf("NO TENEMOS PASAJEROS MAYORES DE 60 AÑOS QUE SEAN VIUDOS \n");
+		}
+
+	//b) el número de cliente y edad de la mujer soltera más joven.
+		if(edadMujerSolteraMasJoven > 0)
+		{
+			printf("El número de cliente: %d , y edad de la mujer soltera más joven es: %d \n",numeroMujerSolteraMasJoven, edadMujerSolteraMasJoven);
+		}else
+		{
+			printf("NO TENEMOS EN EL VIAJE MUJERES SOLTERAS \n");
+		}
+	//c) cuánto sale el viaje total sin descuento.
+
+		printf("El viaje total sin descuento es: %d \n", viajeTotalSinDescuento);
+
+	/*
+	 d) si hay más del 50% de los pasajeros que tiene más de 60 años ,
+        el precio final tiene un descuento del 25%, que solo mostramos si corresponde.
+	*/
+		if(porcentajeMayoresDe60 > 50)
+		{
+			viajeConDescuento = viajeTotalSinDescuento * 0.75;
+			printf("El precio final con descuento es: %d \n", viajeConDescuento);
+		}else
+		{
+			printf("NO HUBO DESCUENTOS EN SUS BOLETOS");
+		}
+
+	return 0;
+}

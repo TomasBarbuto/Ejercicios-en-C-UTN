@@ -1,0 +1,14 @@
+#include <stdio.h>
+int validarFlotante(int numero, float* pResultado){
+
+	int retorno = -1;
+
+	if(pResultado != NULL && numero == (float)numero ){
+		*pResultado = (float)numero;
+		retorno = 0;
+	}
+
+
+	return retorno;
+}
+

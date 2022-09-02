@@ -1,0 +1,15 @@
+20:51:55 **** Rebuild of configuration Debug for project Ejercicio-3.2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio-3.2.o" "..\\src\\Ejercicio-3.2.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Validaciones.o" "..\\src\\Validaciones.c" 
+..\src\Validaciones.c: In function 'validarNumeroPar':
+..\src\Validaciones.c:17:17: warning: comparison between pointer and integer
+   17 |  if(*pResultado != NULL){
+      |                 ^~
+gcc -o Ejercicio-3.2.exe "src\\Ejercicio-3.2.o" "src\\Validaciones.o" 
+Info: Nothing to build for Ejercicio-3.2
+Info: Nothing to build for Ejercicio-3.2
+20:53:06 **** Incremental Build of configuration Debug for project Ejercicio-3.2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Validaciones.o" "..\\src\\Validaciones.c" 
+gcc -o Ejercicio-3.2.exe "src\\Ejercicio-3.2.o" "src\\Validaciones.o" 

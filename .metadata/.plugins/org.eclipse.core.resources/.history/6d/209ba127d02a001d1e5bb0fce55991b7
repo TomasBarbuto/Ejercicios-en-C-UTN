@@ -1,0 +1,11 @@
+int validarFlotante(float numero, int* resultado) {
+
+	int retorno = -1;
+
+	if (numero > 0 && numero < 1) {
+		retorno = 0;
+	}
+
+	return retorno;
+}
+

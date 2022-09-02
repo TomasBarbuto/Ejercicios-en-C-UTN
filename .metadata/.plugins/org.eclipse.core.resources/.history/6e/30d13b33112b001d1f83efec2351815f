@@ -1,0 +1,18 @@
+#include <stdio.h>
+int validarFlotante(int numero, float* pResultado){
+
+	int retorno = -1;
+
+	if(pResultado != NULL)
+		if(numero == (float)numero ){
+		*pResultado = numero;
+		retorno = 0;
+		break;
+	}else{
+		printf("El numero ingresado no es flotante");
+	}
+
+
+	return retorno;
+}
+

@@ -1,0 +1,17 @@
+LaunchTargetManager/configs/\!No\ where\ to\ run\u00A1.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Ejercicio-2.1.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Ejercicio-2.2.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Ejercicio-2.3.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Ejercicio-2.4.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Ejercicio-3.1.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/Ejercicio-3.2.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/They\ are\ so\ dead\!.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/configs/\u00A1They\ will\ cower\!.exe=org.eclipse.launchbar.core.launchTargetType.local\:Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
+activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:\!No where to run\u00A1.exe,org.eclipse.launchbar.core.descriptorType.default\:They are so dead\!.exe,org.eclipse.launchbar.core.descriptorType.default\:\u00A1They will cower\!.exe,org.eclipse.launchbar.core.descriptorType.default\:Ejercicio-2.1.exe,org.eclipse.launchbar.core.descriptorType.default\:Ejercicio-2.2.exe,org.eclipse.launchbar.core.descriptorType.default\:Ejercicio-2.3.exe,org.eclipse.launchbar.core.descriptorType.default\:Ejercicio-2.4.exe,org.eclipse.launchbar.core.descriptorType.default\:Ejercicio-3.1.exe,org.eclipse.launchbar.core.descriptorType.default\:Ejercicio-3.2.exe
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:\!No\ where\ to\ run\u00A1.exe/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:\!No\ where\ to\ run\u00A1.exe/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

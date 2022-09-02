@@ -1,0 +1,7 @@
+int validarFlotante(float numero, int* pResultado) {
+
+
+
+	return 0;
+}
+

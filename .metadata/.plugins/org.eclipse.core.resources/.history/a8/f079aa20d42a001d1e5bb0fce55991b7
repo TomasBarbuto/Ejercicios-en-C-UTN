@@ -1,0 +1,13 @@
+int validarFlotante(float numero, float* pResultado) {
+
+	int retorno = -1;
+	float resultado;
+
+	if(*pResultado != NULL && numero == "%f"){
+		*pResultado = numero;
+		retorno = 0;
+	}
+
+	return retorno;
+}
+
