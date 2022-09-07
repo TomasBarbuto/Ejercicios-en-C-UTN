@@ -1,0 +1,11 @@
+22:31:56 **** Rebuild of configuration Debug for project 1-Crear-Function ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\1-Crear-Function.o" "..\\src\\1-Crear-Function.c" 
+..\src\1-Crear-Function.c: In function 'dividirDosEnteros':
+..\src\1-Crear-Function.c:57:6: warning: variable 'division' set but not used [-Wunused-but-set-variable]
+   57 |  int division;
+      |      ^~~~~~~~
+gcc -o 1-Crear-Function.exe "src\\1-Crear-Function.o" 
+
+22:31:56 Build Finished. 0 errors, 1 warnings. (took 423ms)
+

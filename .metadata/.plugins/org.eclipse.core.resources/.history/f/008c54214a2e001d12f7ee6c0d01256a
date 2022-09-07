@@ -1,0 +1,42 @@
+/*
+Ejercicio 4-1:
+Realizar un programa que permita calcular y mostrar el factorial de un número.
+Utilizar la función PedirNumero de la ejercitación 3-4.
+Por ejemplo:
+5! = 5*4*3*2*1 = 120
+*/
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Validaciones.h"
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	int numeroEntero;
+	int i;
+	int acumulador;
+
+	printf("Ingrese un numero Entero: \n");
+	scanf("%d", &numeroEntero);
+
+	//if(numeroEntero < 0){
+		//acumulador = numeroEntero;
+		//for(i = numeroEntero; i == -1; i++){
+			//if(i == numeroEntero){
+				//i++;
+			//}
+			//acumulador *= i;
+
+		//}
+	//}else{
+		acumulador = numeroEntero;
+		for(i = numeroEntero; i == 1; i--){
+			if(i == numeroEntero){
+				i--;
+			}
+			acumulador *= i;
+		}
+	}
+		printf("El resultado es: %d",acumulador);
+}

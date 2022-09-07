@@ -1,0 +1,20 @@
+19:19:58 **** Rebuild of configuration Debug for project ¡the hunt beegins! ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\¡the hunt beegins!.o" "..\\src\\¡the hunt beegins!.c" 
+..\src\¡the hunt beegins!.c: In function 'main':
+..\src\¡the hunt beegins!.c:23:6: warning: unused variable 'AcumuladorNegativos' [-Wunused-variable]
+   23 |  int AcumuladorNegativos = 0;
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\¡the hunt beegins!.c:22:6: warning: unused variable 'acumuladorPositivos' [-Wunused-variable]
+   22 |  int acumuladorPositivos = 0;
+      |      ^~~~~~~~~~~~~~~~~~~
+..\src\¡the hunt beegins!.c:21:6: warning: unused variable 'numeroParMayor' [-Wunused-variable]
+   21 |  int numeroParMayor;
+      |      ^~~~~~~~~~~~~~
+..\src\¡the hunt beegins!.c:18:6: warning: variable 'numeroMenorIngresado' set but not used [-Wunused-but-set-variable]
+   18 |  int numeroMenorIngresado;
+      |      ^~~~~~~~~~~~~~~~~~~~
+gcc -o "¡the hunt beegins!.exe" "src\\¡the hunt beegins!.o" 
+
+19:20:02 Build Finished. 0 errors, 4 warnings. (took 4s.218ms)
+

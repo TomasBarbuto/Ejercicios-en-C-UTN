@@ -1,0 +1,15 @@
+
+
+#ifndef VALIDACIONES_H_
+#define VALIDACIONES_H_
+
+int validarFlotante(float numero, float* pResultado);
+int validarEntero(int numero, int* pResultado);
+int validarNumeroPar (int numero, int* pResultado);
+int validarRango (int numero);
+int sumar1(int numero1, int numero2);
+int sumar2(void);
+void sumar3(int numero1, int numero2);
+void sumar4(void);
+
+#endif /* VALIDACIONES_H_ */

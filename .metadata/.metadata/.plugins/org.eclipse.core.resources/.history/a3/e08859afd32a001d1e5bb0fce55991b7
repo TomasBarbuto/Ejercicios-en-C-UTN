@@ -1,0 +1,25 @@
+/*
+ Ejercicio 3-1:
+ Crear una función que muestre por pantalla el número flotante que recibe como parámetro.
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Validaciones.h"
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	float numeroFlotante;
+	float resultado;
+
+	printf("Ingrese un numero Flotante: \n");
+	scanf("%f", &numeroFlotante);
+
+	resultado = (numeroFlotante, &resultado);
+
+
+
+	return 0;
+}
+

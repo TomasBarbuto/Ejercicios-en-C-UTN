@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int	sumarDosEnteros(int primerNumero, int segundoNumero);
+int	dividirDosEnteros(int primerNumero, int segundoNumero);
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	char operador;
+	int numeroUno;
+	int numeroDos;
+	int resultado;
+
+	printf("Ingrese el numero: ");
+	scanf("%d", &numeroUno);
+
+	fflush(stdin);
+	printf("Ingrese el operador (+/-): ");
+	scanf("%c", &operador);
+	printf("\nIngrese el numero: ");
+	scanf("%d", &numeroDos);
+
+	switch(operador){
+		case '+':
+			resultado = sumarDosEnteros(numeroUno, numeroDos);
+			break;
+		case '-':
+			resultado = numeroUno - numeroDos;
+			break;
+		case '/':
+			resultado = dividirDosEnteros(numeroUno, numeroDos);
+			if (resultado == -1){
+				printf("\nNo puede dividir por 0");
+			}
+			if (resultado == -2){
+				printf("\nNo puede ser mayor a 100 el primer numero");
+			}
+			break;
+	}
+
+	printf("El resultado es: %d", resultado);
+
+	return 0;
+}
+
+int	sumarDosEnteros(int primerNumero, int segundoNumero) {
+	int suma;
+
+	suma = primerNumero + segundoNumero;
+
+	return suma;
+}
+
+int	dividirDosEnteros(int primerNumero, int segundoNumero) {
+
+	int division;
+	int retorno = 0;
+
+	if (primerNumero > 100){
+		retorno = -2;
+	}
+
+	if(segundoNumero != 0){
+
+	division = primerNumero / segundoNumero;
+
+	}else{
+		retorno = -1;
+	}
+
+	return retorno;
+}
