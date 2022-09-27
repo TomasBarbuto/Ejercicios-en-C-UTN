@@ -1,0 +1,15 @@
+/*
+ * Arrays.h
+ *
+ *  Created on: 23 sep. 2022
+ *      Author: barbu
+ */
+
+#ifndef ARRAYS_H_
+#define ARRAYS_H_
+
+int imprimirArray(int array[], int len);
+int cargaAleatoriaArray(int array[], int len, int valor, int index);
+int inicializarArray(int array[], int len, int init);
+
+#endif /* ARRAYS_H_ */

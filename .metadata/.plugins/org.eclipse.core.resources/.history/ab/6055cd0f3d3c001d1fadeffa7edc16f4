@@ -1,0 +1,52 @@
+/*
+ * Arrays.c
+ *
+ *  Created on: 24 sep. 2022
+ *      Author: barbu
+ */
+#include <stdio.h>
+#include "validaciones.h"
+
+void imprimirArray(int array[], int len){
+
+	int i;
+
+	if(array != NULL){
+
+		for(i = 0; i < len; i++){
+
+			printf("Iteracion numero: %d\n", i);
+			printf("El valor es: %d\n", array[i]);
+
+		}
+	}
+}
+
+void inicializarArrays(int array[], int len){
+
+	int i;
+
+	for (i = 0; i < len; i++) {
+
+		if (getNumber(&array[i], "Ingrese un numerpo entre 0-100\n",
+				"No ingresaste un numero o no se encuentra dentro del rango\n",
+				-1000, 1000)) {
+		}
+	}
+}
+
+void sumarArrays(int array[], int len, int* pResultado){
+
+	int i;
+	int acumulador = 0;
+
+	for (i = 0; i < len; i++){
+
+		acumulador += array[i];
+
+	}
+
+	*pResultado = acumulador;
+}
+
+

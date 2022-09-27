@@ -1,0 +1,35 @@
+/*
+ Ejercicio 5-1:
+ Pedir el ingreso de 5 números. Mostrarlos y calcular la sumatoria de los mismos.
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "validaciones.h"
+#include "Arrays.h"
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	int arrayNumeros[5];
+	int acumulador = 0;
+	int len;
+
+	len= strlen(arrayNumeros);
+
+	for (int i = 0; i < len; i++) {
+
+			if (getNumber(arrayNumeros, "Ingrese un numerpo entre 0-100\n",
+					"No ingresaste un numero o no se encuentra dentro del rango\n",
+					-100, 100)) {
+
+				acumulador += arrayNumeros[i];
+			}
+
+	acumulador = sumarArrays(arrayNumeros,5);
+
+	imprimirArray(arrayNumeros, 5);
+	printf("La suma de los 5 numeros ingresado es: %d", acumulador);
+
+	return 0;
+}

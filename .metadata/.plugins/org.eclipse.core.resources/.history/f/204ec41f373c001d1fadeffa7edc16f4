@@ -1,0 +1,13 @@
+/*
+ * Arrays.h
+ *
+ *  Created on: 24 sep. 2022
+ *      Author: barbu
+ */
+
+#ifndef ARRAYS_H_
+#define ARRAYS_H_
+
+void imprimirArray(int array[], int len);
+
+#endif /* ARRAYS_H_ */

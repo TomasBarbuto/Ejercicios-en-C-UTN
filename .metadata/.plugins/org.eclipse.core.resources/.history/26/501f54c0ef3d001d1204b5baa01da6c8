@@ -1,0 +1,57 @@
+/*
+ Armar un Menú de Opciones con las siguientes opciones
+
+ 1-Inicializar
+ 2-Cargar
+ 3-Mostrar
+ 4-Calcular Promedio
+ 5-Ordenar
+
+ Al ingresar a cada opción del menú deberá imprimir en pantalla el nombre del mismo. Ej: Si se
+ presiona la opción 1 mostrar por pantalla “Ud. ha seleccionado lo opción 1-Inicializar”
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Mostrar.h"
+#include "Validaciones.h"
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	int opcion;
+
+	do {
+
+		mostrarMenu(&opcion);
+
+
+		switch (opcion) {
+
+				case 1:
+					break;
+
+				case 2:
+					break;
+
+				case 3:
+					break;
+
+				case 4:
+					break;
+
+				case 5:
+					break;
+
+				case 6:
+					break;
+				}
+
+	} while (opcion != 6);
+
+	if(opcion == 6){
+		printf("Usted a salidos del menu");
+	}
+
+	return 0;
+}

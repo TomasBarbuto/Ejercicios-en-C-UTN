@@ -1,0 +1,28 @@
+/*
+ * Mostrar.c
+ *
+ *  Created on: 22 sep. 2022
+ *      Author: barbu
+ */
+
+void mostrarMenu(int *menu, char *mensaje, char mensajeError*, int opcionUno, int opcionDos, int opcionTres,
+				int opcionCuatro, int opcionCinco, int opcionSeis){
+
+	printf("\nBievenido al menu de la seleccion\n"
+					"1-Ingreso de costos de mantenimiento\n"
+					"\tCosto de hospedaje -> $ %.2f\n"
+					"\tCosto de Comida -> $ %.2f\n"
+					"\tCosto de Transporte -> $ %.2f\n"
+					"2-Carga de Jugadores\n"
+					"\tArqueros -> %d\n"
+					"\tDefensores -> %d\n"
+					"\tMediocentro -> %d\n"
+					"\tDelanteros -> %d\n"
+					"3-Realizar todos los calculos\n"
+					"4-Informar todos los resultados\n"
+					"5-Salir\n",acumuladorUno, acumuladorDos, acumuladorTres,
+					posicionUno, posicionDos, posicionTres, posicionCuatro);
+
+			scanf("%d",pMenu);
+
+}

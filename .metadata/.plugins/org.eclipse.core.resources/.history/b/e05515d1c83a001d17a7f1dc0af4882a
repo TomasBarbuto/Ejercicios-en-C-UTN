@@ -1,0 +1,85 @@
+#include <stdio.h>
+int validarFlotante(int numero, float* pResultado){
+
+	int retorno = -1;
+
+	if(pResultado != NULL){
+		*pResultado = numero;
+		retorno = 0;
+	}
+	return retorno;
+}
+
+int validarNumeroPar (int numero, int* pResultado){
+
+	int retorno = -1;
+
+	if(pResultado != NULL){
+		if(numero % 2 == 0){
+			*pResultado = numero;
+			retorno = 0;
+
+		}else{
+
+			retorno = -1;
+		}
+	}
+	return retorno;
+}
+
+int validarEntero(int numero, int* pResultado){
+
+	int retorno = 0;
+
+		if(pResultado != NULL){
+			*pResultado = numero;
+			retorno = 1;
+		}
+		return retorno;
+}
+
+int validarRango(int numero, int maximo, int minimo){
+
+	int retorno = 0;
+
+	if(numero >= minimo && numero <= maximo){
+
+		retorno = 1;
+
+	}
+
+	return retorno;
+}
+
+
+
+int utn_getNumber(int *pResultado, char *mensaje, char *mensajeError, int minimo, int maximo){
+
+	int retorno = 0;
+	int bufferInt; //Con esto interactuamos con el usuario.
+
+	if (pResultado != NULL && mensaje != NULL && mensajeError != NULL && minimo < maximo){
+
+		do{
+			printf("%s", mensaje);
+			fflush(stdin);
+			scanf("%d", &bufferInt);
+
+			if (bufferInt >= minimo && bufferInt <= maximo) {
+
+				*pResultado = bufferInt;
+				retorno = 0;
+				break;
+
+			}else{
+
+				printf("%s", mensajeError);
+
+			}
+
+		}while(retorno != 0);
+	}
+
+	return retorno;
+}
+

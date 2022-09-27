@@ -1,0 +1,22 @@
+/*
+ * Arrays.c
+ *
+ *  Created on: 24 sep. 2022
+ *      Author: barbu
+ */
+#include <stdio.h>
+
+void imprimirArray(int array[], int len){
+
+	int i;
+
+	if(array != NULL){
+
+		for(i = 0; i < len; i++){
+
+			printf("Iteracion numero: %d\n", i);
+			printf("El valor es: %d\n", array[i]);
+
+		}
+	}
+}

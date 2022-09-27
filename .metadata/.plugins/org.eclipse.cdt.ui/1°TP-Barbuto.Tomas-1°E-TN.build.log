@@ -1,0 +1,9 @@
+19:23:46 **** Incremental Build of configuration Debug for project 1訊P-Barbuto.Tomas-1蚩-TN ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Validaciones.o" "..\\src\\Validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mostrar.o" "..\\src\\Mostrar.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\1訊P-Barbuto.Tomas-1蚩-TN.o" "..\\src\\1訊P-Barbuto.Tomas-1蚩-TN.c" 
+gcc -o 1訊P-Barbuto.Tomas-1蚩-TN.exe "src\\1訊P-Barbuto.Tomas-1蚩-TN.o" "src\\Calculos.o" "src\\Mostrar.o" "src\\Validaciones.o" 
+
+19:23:47 Build Finished. 0 errors, 0 warnings. (took 875ms)
+

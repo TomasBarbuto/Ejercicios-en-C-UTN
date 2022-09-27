@@ -1,0 +1,16 @@
+/*
+ * Mostrar.h
+ *
+ *  Created on: 22 sep. 2022
+ *      Author: barbu
+ */
+
+#ifndef MOSTRAR_H_
+#define MOSTRAR_H_
+
+void mostrarMenu(int *menu, char *mensaje, char *mensajeError, int opcionUno, int opcionDos, int opcionTres,
+				int opcionCuatro, int opcionCinco, int opcionSeis);
+
+int utn_getNumber(int *pResultado, char *mensaje, char *mensajeError, int minimo, int maximo);
+
+#endif /* MOSTRAR_H_ */

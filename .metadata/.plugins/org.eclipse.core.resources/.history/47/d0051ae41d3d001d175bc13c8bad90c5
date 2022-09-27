@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+void mostrarMenu(int *pMenu, float acumuladorUno, float acumuladorDos, float acumuladorTres,
+				int posicionUno, int posicionDos, int posicionTres, int posicionCuatro){
+
+	if(pMenu != NULL){
+
+
+		printf("\nBievenido al menu de la seleccion\n"
+						"1-Ingreso de costos de mantenimiento\n"
+						"\tCosto de hospedaje -> $ %.2f\n"
+						"\tCosto de Comida -> $ %.2f\n"
+						"\tCosto de Transporte -> $ %.2f\n"
+						"2-Carga de Jugadores\n"
+						"\tArqueros -> %d\n"
+						"\tDefensores -> %d\n"
+						"\tMediocentro -> %d\n"
+						"\tDelanteros -> %d\n"
+						"3-Realizar todos los calculos\n"
+						"4-Informar todos los resultados\n"
+						"5-Salir\n",acumuladorUno, acumuladorDos, acumuladorTres,
+						posicionUno, posicionDos, posicionTres, posicionCuatro);
+
+		getNumber(pMenu,"Opcion: " , "No ingreso un valor valido\n", 1, 5);
+
+
+	}
+}
+

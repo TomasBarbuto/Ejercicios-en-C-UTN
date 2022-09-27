@@ -1,0 +1,62 @@
+/*
+ ============================================================================
+ Name        : 1.c
+ Author      : 
+ Version     :
+ Copyright   : Your copyright notice
+ Description : Hello World in C, Ansi-style
+ ============================================================================
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include "Mostrar.h"
+
+int main(void) {
+	setbuf(stdout,NULL);
+
+	typedef struct{
+
+		int idProducto;
+		char descripcion[1024];
+		char nacionalidad[1024];
+		int tipo;
+		float precio;
+
+	}product ;
+
+	int menu;
+	int alta;
+	int baja;
+	int modificar;
+	int listado;
+	int listadoPorPrecio;
+	int listadoPorDescripcion
+
+	mostrarMenu(&menu, alta, baja, modificar, listado, listadoPorPrecio, listadoPorDescripcion);
+
+	switch(menu){
+
+	case 1:
+		break;
+
+	case 2:
+		break;
+
+	case 3:
+		break;
+
+	case 4:
+		break;
+
+	case 5:
+		break;
+
+	case 6:
+		break;
+
+	}
+
+
+	return EXIT_SUCCESS;
+}
