@@ -1,0 +1,10 @@
+#include <stdio.h>
+
+int initTipos(tipo tipos[], int len){
+
+	int retorno = 0;
+
+
+
+	return retorno;
+}

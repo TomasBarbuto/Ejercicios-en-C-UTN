@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int idHojaDeRuta() {
+
+	static int idHojaDeRuta = 20000;
+	idHojaDeRuta++;
+
+	return idHojaDeRuta;
+}
+
+int inicializarHojaDeRuta(hojaDeRuta hojaRuta[], int len) {
+
+	int retorno = 0;
+
+	if (hojaRuta != NULL && len > 0) {
+
+		for (int i = 0; i < len; i++) {
+
+			hojaRuta[i].isEmpty = 0; //0 vacio 1 lleno.
+		}
+
+		retorno = 1;
+	}
+
+	return retorno;
+}
+
+

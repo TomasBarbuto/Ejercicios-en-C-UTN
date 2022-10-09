@@ -1,0 +1,77 @@
+/*
+ Ejercicio 17-1:
+
+ Realizar una función que retorne un puntero a eProducto. Dentro de esta función deberá crear un
+ producto hardcodeado, un puntero y se apuntará ese puntero al producto. Mostrar el producto
+ cargado 5 veces desde el main. Observar el comportamiento del programa.
+
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+typedef struct{
+
+	char nombre[10];
+
+}producto;
+
+int initArray(int *pArrayNumeros,int sizeArray)
+int printArray(int *pArrayNumeros,int sizeArray);
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	producto productos;
+
+
+
+
+	return 0;
+}
+
+int* mostrarCincoVeces(arrayNombre[], int, int){
+
+	int retorno;
+
+	producto productos;
+
+	productos.nombre = "Motorola";
+
+	return retorno;
+}
+
+int initArray(int *pArrayNumeros,int sizeArray){
+    int i;
+
+    if(pArrayNumeros != NULL && sizeArray > 0){
+        for(i = 0; i < sizeArray; i++){
+            *(pArrayNumeros+i) = 0;
+        }
+    }
+    return 0;
+}
+
+int printArray(int *pArrayNumeros,int sizeArray){
+    int i;
+
+    if(pArrayNumeros != NULL && sizeArray > 0){
+        for(i = 0; i < sizeArray; i++){
+            printf("Numero: %d\n",*(pArrayNumeros+i));
+        }
+    }
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+

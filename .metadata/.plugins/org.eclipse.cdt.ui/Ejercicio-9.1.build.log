@@ -1,1 +1,12 @@
-Info: Nothing to build for Ejercicio-9.1
+21:26:59 **** Rebuild of configuration Debug for project Ejercicio-9.1 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Mostrar.o" "..\\src\\Mostrar.c" 
+..\src\Mostrar.c: In function 'mostrarMenu':
+..\src\Mostrar.c:20:5: warning: implicit declaration of function 'utn_getNumber' [-Wimplicit-function-declaration]
+   20 |  if(utn_getNumber(menu, "A ingresado correctamente\n", "Numero no valido\n vuelva a reingresar un numero\n",1,6)){
+      |     ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicio-9.1.o" "..\\src\\Ejercicio-9.1.c" 
+gcc -o Ejercicio-9.1.exe "src\\Ejercicio-9.1.o" "src\\Mostrar.o" 
+
+21:27:04 Build Finished. 0 errors, 1 warnings. (took 4s.916ms)
+

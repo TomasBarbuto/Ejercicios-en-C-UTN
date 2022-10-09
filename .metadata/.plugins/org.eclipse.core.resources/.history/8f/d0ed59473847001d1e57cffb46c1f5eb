@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include "Tipo.h"
+#include <string.h>
+
+void initTipos(tipo tipos[]){
+
+	tipos[0].idTipo = 1000;
+	strncpy(tipos[0].descripcion,"Camion Recto");
+
+	tipos[1].idTipo = 1001;
+	tipos[1].descripcion = 'Camion Remolque';
+
+	tipos[2].idTipo = 1002;
+	tipos[2].descripcion = 'Camion Semirremolque';
+
+	tipos[3].idTipo = 1003;
+	tipos[3].descripcion = 'Camion Elevador';
+
+}

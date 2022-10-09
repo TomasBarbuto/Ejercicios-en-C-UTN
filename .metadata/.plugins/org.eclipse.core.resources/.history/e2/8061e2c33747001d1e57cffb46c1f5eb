@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include "Tipo.h"
+
+void initTipos(tipo tipos[], int len){
+
+	tipos[0].idTipo = 1000;
+	tipos[0].descripcion = 'CAMION RECTO';
+
+	tipos[1].idTipo = 1001;
+	tipos[1].descripcion = 'CAMION REMOLQUE';
+
+	tipos[2].idTipo = 1002;
+	tipos[2].descripcion = 'CAMION SEMIRREMOLQUE';
+
+	tipos[3].idTipo = 1003;
+	tipos[3].descripcion = 'CAMION ELEVADOR';
+
+}

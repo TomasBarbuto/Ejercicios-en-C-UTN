@@ -35,13 +35,14 @@ int ordenarArray (int Array[], int len){
 }
 
 /*string.h
- * strlen
- * strcpy
- * strcmp
- * stricmp
- * strcat
- * strupr (win)
- * strlwr (win)
+ * sizeof todos los espacios [10]
+ * strlen longitud de cadena termina en \0.
+ * strcpy copia
+ * strcmp compara
+ * stricmp  compara case sensitive
+ * strcat  concate arrays
+ * strupr (win) cambia a mayus
+ * strlwr (win) cambia a minus
  * */
 
 /*stdio.h

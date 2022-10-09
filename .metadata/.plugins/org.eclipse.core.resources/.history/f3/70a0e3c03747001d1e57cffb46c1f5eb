@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include "Tipo.h"
+
+int initTipos(tipo tipos[], int len){
+
+	int retorno = 0;
+	tipos[4];
+
+	do{
+
+		for(int i = 0; i < len; i++){
+
+
+
+		}
+
+	}while(tipos.idTipo != 1003);
+
+
+
+
+
+	return retorno;
+}

@@ -1,0 +1,27 @@
+
+#ifndef TRANSPORTE_H_
+#define TRANSPORTE_H_
+
+typedef struct{
+
+	int idTransporte;
+	char descripcion[1024];
+	int pesoCarga;
+	int cantidadBultos;
+	int tipoId;
+	int isEmpty;
+
+}transporte;
+
+int idTransportes();
+int inicializarTransporte(transporte transportes[], int len);
+int buscarVacio(transporte transportes[], int len);
+int darAltaTransporte(transporte transportes[], int len);
+int buscarIdDeTransporte(transporte transportes[], int len, int id);
+int darBajaTransporte(transporte transportes[], int len);
+void mostrarDatos(transporte transporte[], int len);
+int listarTransportes(transporte transportes[], int len);
+int modificartransporte(transporte transportes[], int len);
+int orderStruct(transporte transportes[], int len, char des[]);
+
+#endif /* TRANSPORTE_H_ */

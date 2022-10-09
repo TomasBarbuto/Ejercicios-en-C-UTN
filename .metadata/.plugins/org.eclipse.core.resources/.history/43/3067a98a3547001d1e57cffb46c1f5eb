@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int listarTransportes(transporte transportes[], int len) {
+
+	int retorno = -1;
+
+	if (transportes != NULL && len > 0) {
+
+		printf("Los transportes actuales son: \n");
+
+		for (int i = 0; i < len; i++) {
+
+			if (transportes[i].isEmpty == 1) {
+
+				printf("ID: %d\n", transportes[i].idTransporte);
+			}
+		}
+		retorno = 0;
+	}
+
+	return retorno;
+}

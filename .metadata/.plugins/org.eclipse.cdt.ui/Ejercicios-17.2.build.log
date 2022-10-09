@@ -1,0 +1,12 @@
+20:54:23 **** Incremental Build of configuration Debug for project Ejercicios-17.2 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Ejercicios-17.2.o" "..\\src\\Ejercicios-17.2.c" 
+..\src\Ejercicios-17.2.c:16:23: error: unknown type name 'arrayNumeros'
+   16 | int borrarOcurrencias(arrayNumeros[], int sizeArray, int num);
+      |                       ^~~~~~~~~~~~
+..\src\Ejercicios-17.2.c:29:23: error: unknown type name 'arrayNumeros'
+   29 | int borrarOcurrencias(arrayNumeros[], int sizeArray, int num){
+      |                       ^~~~~~~~~~~~
+
+20:54:23 Build Failed. 2 errors, 0 warnings. (took 159ms)
+

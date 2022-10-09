@@ -1,0 +1,9 @@
+#include <stdio.h>
+
+int idHojaDeRuta() {
+
+	static int idHojaDeRuta = 20000;
+	idHojaDeRuta++;
+
+	return idHojaDeRuta;
+}
