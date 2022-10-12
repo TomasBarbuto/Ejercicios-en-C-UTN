@@ -1,7 +1,1 @@
-17:26:04 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
-gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
-
-17:26:04 Build Finished. 0 errors, 0 warnings. (took 289ms)
-
+Info: Nothing to build for PrimerParcialLaboratorio

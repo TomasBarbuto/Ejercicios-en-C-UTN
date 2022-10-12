@@ -2,6 +2,11 @@
 #include "Tipo.h"
 #include <string.h>
 
+/**
+*\brief: Iniciar el campo isEmpty = 0, del array de tipo.
+*\param: variable de tipo tipo.
+*\return: Retorna 1 si lo inicio correctamente, Retorna 0 si ocurrio algun error.
+**/
 int initTipos(tipo tipos[]){
 
 	int retorno = 0;
@@ -25,13 +30,18 @@ int initTipos(tipo tipos[]){
 	return retorno;
 }
 
+/**
+*\brief: Muestra los datos de indices del array de tipo.
+*\param: Array de tipo, Longitud del array.
+*\return: Retorna 1 si puede mostrarlo, Retorna 0 si ocurrio un error.
+**/
 int listTipos(tipo tipos[], int len) {
 
 	int retorno = 0;
 
 	if (tipos != NULL && len > 0) {
 
-		printf("Los Tipos actuales son: \n");
+		printf("Los Tipos actuales son: \n\n");
 
 		for (int i = 0; i < len; i++) {
 

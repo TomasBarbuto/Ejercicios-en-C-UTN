@@ -2711,3 +2711,1581 @@ collect2.exe: error: ld returned 1 exit status
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
 gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+Info: Nothing to build for PrimerParcialLaboratorio
+09:30:53 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+09:33:15 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+09:46:28 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+09:46:33 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+09:58:21 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarHojasDeRutaPorFecha':
+..\src\HojaDeRuta.c:165:13: error: invalid operands to binary == (have 'fechas' {aka 'struct <anonymous>'} and 'fechas' {aka 'struct <anonymous>'})
+  165 |    if(fecha == hojaRuta[i].fecha && hojaRuta[i].isEmpty == 1){
+      |             ^~ ~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           fechas {aka struct <anonymous>}
+09:59:36 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarHojasDeRutaPorFecha':
+..\src\HojaDeRuta.c:165:33: error: subscripted value is neither array nor pointer nor vector
+  165 |    if(fecha == hojaRuta[i].fecha[i] && hojaRuta[i].isEmpty == 1){
+      |                                 ^
+10:00:21 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarHojasDeRutaPorFecha':
+..\src\HojaDeRuta.c:165:13: error: invalid operands to binary == (have 'fechas' {aka 'struct <anonymous>'} and 'fechas' {aka 'struct <anonymous>'})
+  165 |    if(fecha == hojaRuta[i].fecha && hojaRuta[i].isEmpty == 1){
+      |             ^~ ~~~~~~~~~~~~~~~~~
+      |                           |
+      |                           fechas {aka struct <anonymous>}
+10:01:29 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:01:49 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:04:24 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:04:30 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:07:49 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:07:55 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:09:01 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:24:06 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'importePorTransporte':
+..\src\HojaDeRuta.c:182:14: error: invalid operands to binary != (have 'hojaDeRuta' {aka 'struct <anonymous>'} and 'void *')
+  182 |  if(hojaRuta != NULL && transportes != NULL && len > 0){
+      |              ^~
+..\src\HojaDeRuta.c:182:37: error: invalid operands to binary != (have 'transporte' {aka 'struct <anonymous>'} and 'void *')
+  182 |  if(hojaRuta != NULL && transportes != NULL && len > 0){
+      |                                     ^~
+..\src\HojaDeRuta.c:184:16: error: incompatible type for argument 1 of 'mostrarDatos'
+  184 |   mostrarDatos(transportes, len);
+      |                ^~~~~~~~~~~
+      |                |
+      |                transporte {aka struct <anonymous>}
+In file included from ..\src\HojaDeRuta.c:3:
+..\src\Transporte.h:22:30: note: expected 'transporte *' {aka 'struct <anonymous> *'} but argument is of type 'transporte' {aka 'struct <anonymous>'}
+   22 | void mostrarDatos(transporte transportes[], int len);
+      |                   ~~~~~~~~~~~^~~~~~~~~~~~~
+..\src\HojaDeRuta.c:189:26: error: incompatible type for argument 1 of 'buscarIdTransporte'
+  189 |    if(buscarIdTransporte(transportes, len, id)){
+      |                          ^~~~~~~~~~~
+      |                          |
+      |                          transporte {aka struct <anonymous>}
+In file included from ..\src\HojaDeRuta.c:3:
+..\src\Transporte.h:28:35: note: expected 'transporte *' {aka 'struct <anonymous> *'} but argument is of type 'transporte' {aka 'struct <anonymous>'}
+   28 | int buscarIdTransporte(transporte transportes[], int len, int id);
+      |                        ~~~~~~~~~~~^~~~~~~~~~~~~
+..\src\HojaDeRuta.c:191:28: error: subscripted value is neither array nor pointer nor vector
+  191 |      acumulador += hojaRuta[i].precioViaje;
+      |                            ^
+11:25:37 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:164:27: error: incompatible type for argument 1 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                           ^~~~~~~~~
+      |                           |
+      |                           hojaDeRuta * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:37: note: expected 'hojaDeRuta' {aka 'struct <anonymous>'} but argument is of type 'hojaDeRuta *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                          ~~~~~~~~~~~^~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:38: error: incompatible type for argument 2 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                      ^~~~~~~~~~~
+      |                                      |
+      |                                      transporte * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:58: note: expected 'transporte' {aka 'struct <anonymous>'} but argument is of type 'transporte *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                               ~~~~~~~~~~~^~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:68: error: incompatible type for argument 4 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                                                    ^~~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    float
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:85: note: expected 'int *' but argument is of type 'float'
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                                                                ~~~~~^~~~~~~~~~~
+11:25:58 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:164:27: error: incompatible type for argument 1 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                           ^~~~~~~~~
+      |                           |
+      |                           hojaDeRuta * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:37: note: expected 'hojaDeRuta' {aka 'struct <anonymous>'} but argument is of type 'hojaDeRuta *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                          ~~~~~~~~~~~^~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:38: error: incompatible type for argument 2 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                      ^~~~~~~~~~~
+      |                                      |
+      |                                      transporte * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:58: note: expected 'transporte' {aka 'struct <anonymous>'} but argument is of type 'transporte *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                               ~~~~~~~~~~~^~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:68: error: incompatible type for argument 4 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                                                    ^~~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    float
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:85: note: expected 'int *' but argument is of type 'float'
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                                                                ~~~~~^~~~~~~~~~~
+11:26:22 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:164:27: error: incompatible type for argument 1 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                           ^~~~~~~~~
+      |                           |
+      |                           hojaDeRuta * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:37: note: expected 'hojaDeRuta' {aka 'struct <anonymous>'} but argument is of type 'hojaDeRuta *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                          ~~~~~~~~~~~^~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:38: error: incompatible type for argument 2 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                      ^~~~~~~~~~~
+      |                                      |
+      |                                      transporte * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:58: note: expected 'transporte' {aka 'struct <anonymous>'} but argument is of type 'transporte *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                               ~~~~~~~~~~~^~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:68: error: incompatible type for argument 4 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                                                    ^~~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    float
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:85: note: expected 'int *' but argument is of type 'float'
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                                                                ~~~~~^~~~~~~~~~~
+11:27:17 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:164:27: error: incompatible type for argument 1 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                           ^~~~~~~~~
+      |                           |
+      |                           hojaDeRuta * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:37: note: expected 'hojaDeRuta' {aka 'struct <anonymous>'} but argument is of type 'hojaDeRuta *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                          ~~~~~~~~~~~^~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:38: error: incompatible type for argument 2 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                      ^~~~~~~~~~~
+      |                                      |
+      |                                      transporte * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:58: note: expected 'transporte' {aka 'struct <anonymous>'} but argument is of type 'transporte *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                               ~~~~~~~~~~~^~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:68: error: incompatible type for argument 4 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                                                    ^~~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    float
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:85: note: expected 'int *' but argument is of type 'float'
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                                                                ~~~~~^~~~~~~~~~~
+11:27:32 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:164:27: error: incompatible type for argument 1 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                           ^~~~~~~~~
+      |                           |
+      |                           hojaDeRuta * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:37: note: expected 'hojaDeRuta' {aka 'struct <anonymous>'} but argument is of type 'hojaDeRuta *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                          ~~~~~~~~~~~^~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:38: error: incompatible type for argument 2 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                      ^~~~~~~~~~~
+      |                                      |
+      |                                      transporte * {aka struct <anonymous> *}
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:58: note: expected 'transporte' {aka 'struct <anonymous>'} but argument is of type 'transporte *' {aka 'struct <anonymous> *'}
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                               ~~~~~~~~~~~^~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:164:68: error: incompatible type for argument 4 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                                                    ^~~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    float
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:85: note: expected 'int *' but argument is of type 'float'
+   39 | int importePorTransporte(hojaDeRuta hojaRuta, transporte transportes, int len, int* precioTotal);
+      |                                                                                ~~~~~^~~~~~~~~~~
+11:28:40 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:164:68: error: incompatible type for argument 4 of 'importePorTransporte'
+  164 |      importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, precioPorHojaDeRuta);
+      |                                                                    ^~~~~~~~~~~~~~~~~~~
+      |                                                                    |
+      |                                                                    float
+In file included from ..\src\PrimerParcialLaboratorio.c:24:
+..\src\HojaDeRuta.h:39:91: note: expected 'float *' but argument is of type 'float'
+   39 | int importePorTransporte(hojaDeRuta hojaRuta[], transporte transportes[], int len, float* precioTotal);
+      |                                                                                    ~~~~~~~^~~~~~~~~~~
+11:29:11 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+11:35:06 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:35:16 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:37:56 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:37:59 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:39:27 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:39:33 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:42:36 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:43:28 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:43:32 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:45:44 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:163:6: error: a label can only be part of a statement and a declaration is not a statement
+  163 |      float precioPorHojaDeRuta = 0;
+      |      ^~~~~
+11:46:40 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:46:46 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:53:30 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:53:34 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:56:06 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:25:42 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:34:8: warning: unused variable 'precioPorTipo' [-Wunused-variable]
+   34 |  float precioPorTipo;
+      |        ^~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+..\src\HojaDeRuta.c:208:75: error: unknown type name 'tipo'
+  208 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal) {
+      |                                                                           ^~~~
+12:26:22 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+..\src\HojaDeRuta.c: In function 'importePorTipoyFecha':
+..\src\HojaDeRuta.c:241:44: error: expected ';' before '}' token
+  241 |       acumulador += hojaRuta[j].precioViaje
+      |                                            ^
+      |                                            ;
+  242 | 
+  243 |      }
+      |      ~                                      
+12:26:39 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+12:27:08 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+12:28:49 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+12:30:11 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+12:30:39 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+12:31:10 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+12:31:34 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+12:32:26 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+12:33:37 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:188:15: warning: format '%d' expects argument of type 'int', but argument 2 has type 'double' [-Wformat=]
+  188 |      printf("%d", precioPorTipo);
+      |              ~^   ~~~~~~~~~~~~~
+      |               |   |
+      |               int double
+      |              %f
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:33:55 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:33:57 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:36:19 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:36:30 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:49:37 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+In file included from ..\src\HojaDeRuta.c:4:
+..\src\HojaDeRuta.h:40:75: error: unknown type name 'tipo'
+   40 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                           ^~~~
+12:49:53 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:49:56 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:18:12 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:18:19 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+13:19:54 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:20:02 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+15:34:44 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'importePorTipoyFecha':
+..\src\HojaDeRuta.c:211:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  211 |  int retorno = 0;
+      |      ^~~~~~~
+..\src\HojaDeRuta.c: At top level:
+..\src\HojaDeRuta.c:252:2: error: expected identifier or '(' before 'return'
+  252 |  return retorno;
+      |  ^~~~~~
+..\src\HojaDeRuta.c:253:1: error: expected identifier or '(' before '}' token
+  253 | }
+      | ^
+..\src\HojaDeRuta.c: In function 'importePorTipoyFecha':
+..\src\HojaDeRuta.c:250:2: warning: control reaches end of non-void function [-Wreturn-type]
+  250 |  }
+      |  ^
+15:35:09 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+20:43:02 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+20:51:42 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:51:47 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+20:55:52 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:55:53 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+20:57:01 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+20:57:07 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+21:06:55 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:06:59 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+21:58:53 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+21:59:01 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+22:00:57 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:01:04 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+22:03:15 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:03:21 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+22:44:07 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+22:49:22 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:49:25 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+22:57:05 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+22:57:09 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:28:22 **** Rebuild of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Validaciones.o" "..\\src\\Validaciones.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Tipo.o" "..\\src\\Tipo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+..\src\Informes.c:3:31: error: unknown type name 'transporte'
+    3 | int mostrarTransportesPorTipo(transporte transportes[], int len){
+      |                               ^~~~~~~~~~
+..\src\Informes.c:42:32: error: unknown type name 'hojaDeRuta'
+   42 | int mostrarHojasDeRutaPorFecha(hojaDeRuta hojaRuta[], int len) {
+      |                                ^~~~~~~~~~
+..\src\Informes.c:86:26: error: unknown type name 'hojaDeRuta'
+   86 | int importePorTransporte(hojaDeRuta hojaRuta[], transporte transportes[],
+      |                          ^~~~~~~~~~
+..\src\Informes.c:86:49: error: unknown type name 'transporte'
+   86 | int importePorTransporte(hojaDeRuta hojaRuta[], transporte transportes[],
+      |                                                 ^~~~~~~~~~
+..\src\Informes.c:116:26: error: unknown type name 'transporte'
+  116 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal) {
+      |                          ^~~~~~~~~~
+..\src\Informes.c:116:52: error: unknown type name 'hojaDeRuta'
+  116 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal) {
+      |                                                    ^~~~~~~~~~
+..\src\Informes.c:116:75: error: unknown type name 'tipo'
+  116 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal) {
+      |                                                                           ^~~~
+Info: Nothing to build for PrimerParcialLaboratorio
+10:30:17 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:145:10: warning: implicit declaration of function 'mostrarTransportesPorTipo' [-Wimplicit-function-declaration]
+  145 |      if (mostrarTransportesPorTipo(transportes,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:157:10: warning: implicit declaration of function 'mostrarHojasDeRutaPorFecha'; did you mean 'mostrarHojaDeRuta'? [-Wimplicit-function-declaration]
+  157 |      if (mostrarHojasDeRutaPorFecha(hojasRuta,
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |          mostrarHojaDeRuta
+..\src\PrimerParcialLaboratorio.c:171:6: warning: implicit declaration of function 'importePorTransporte' [-Wimplicit-function-declaration]
+  171 |      importePorTransporte(hojasRuta, transportes,
+      |      ^~~~~~~~~~~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:187:6: warning: implicit declaration of function 'importePorTipoyFecha' [-Wimplicit-function-declaration]
+  187 |      importePorTipoyFecha(transportes, hojasRuta, tipos, CANT_TRANSPORTE, &precioPorTipo);
+      |      ^~~~~~~~~~~~~~~~~~~~
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+gcc: error: src\Informes.o: No such file or directory
+10:30:38 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:35:35 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:154:11: warning: implicit declaration of function 'mostrarTransportesPorTipo' [-Wimplicit-function-declaration]
+  154 |       if (mostrarTransportesPorTipo(transportes,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:166:11: warning: implicit declaration of function 'mostrarHojasDeRutaPorFecha'; did you mean 'mostrarHojaDeRuta'? [-Wimplicit-function-declaration]
+  166 |       if (mostrarHojasDeRutaPorFecha(hojasRuta,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |           mostrarHojaDeRuta
+..\src\PrimerParcialLaboratorio.c:180:7: warning: implicit declaration of function 'importePorTransporte' [-Wimplicit-function-declaration]
+  180 |       importePorTransporte(hojasRuta, transportes,
+      |       ^~~~~~~~~~~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:196:7: warning: implicit declaration of function 'importePorTipoyFecha' [-Wimplicit-function-declaration]
+  196 |       importePorTipoyFecha(transportes, hojasRuta, tipos, CANT_TRANSPORTE, &precioPorTipo);
+      |       ^~~~~~~~~~~~~~~~~~~~
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:36:12 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:154:11: warning: implicit declaration of function 'mostrarTransportesPorTipo' [-Wimplicit-function-declaration]
+  154 |       if (mostrarTransportesPorTipo(transportes,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:166:11: warning: implicit declaration of function 'mostrarHojasDeRutaPorFecha'; did you mean 'mostrarHojaDeRuta'? [-Wimplicit-function-declaration]
+  166 |       if (mostrarHojasDeRutaPorFecha(hojasRuta,
+      |           ^~~~~~~~~~~~~~~~~~~~~~~~~~
+      |           mostrarHojaDeRuta
+..\src\PrimerParcialLaboratorio.c:180:7: warning: implicit declaration of function 'importePorTransporte' [-Wimplicit-function-declaration]
+  180 |       importePorTransporte(hojasRuta, transportes,
+      |       ^~~~~~~~~~~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:196:7: warning: implicit declaration of function 'importePorTipoyFecha' [-Wimplicit-function-declaration]
+  196 |       importePorTipoyFecha(transportes, hojasRuta, tipos, CANT_TRANSPORTE, &precioPorTipo);
+      |       ^~~~~~~~~~~~~~~~~~~~
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:36:35 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+Info: Nothing to build for PrimerParcialLaboratorio
+10:38:03 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:38:07 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:38:52 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:38:55 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:40:09 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:40:11 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:43:56 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:44:01 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:48:39 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:48:41 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:49:08 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:49:11 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:52:34 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:52:41 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:52:44 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+10:54:14 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:54:17 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+10:57:27 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+10:57:29 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:02:29 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'darAltaHojaDeRuta':
+..\src\HojaDeRuta.c:112:4: warning: implicit declaration of function 'mostrarUnaHojaDeRUTA'; did you mean 'mostrarHojaDeRuta'? [-Wimplicit-function-declaration]
+  112 |    mostrarUnaHojaDeRUTA(&auxHojaRuta, indice);
+      |    ^~~~~~~~~~~~~~~~~~~~
+      |    mostrarHojaDeRuta
+..\src\HojaDeRuta.c: At top level:
+..\src\HojaDeRuta.c:144:6: warning: conflicting types for 'mostrarUnaHojaDeRUTA'
+  144 | void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta[], int indice){
+      |      ^~~~~~~~~~~~~~~~~~~~
+..\src\HojaDeRuta.c:112:4: note: previous implicit declaration of 'mostrarUnaHojaDeRUTA' was here
+  112 |    mostrarUnaHojaDeRUTA(&auxHojaRuta, indice);
+      |    ^~~~~~~~~~~~~~~~~~~~
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:02:44 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:02:48 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:04:13 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:04:17 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:06:32 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:06:34 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:09:44 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:09:47 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:18:00 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:18:04 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:22:15 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:52:00 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'darAltaHojaDeRuta':
+..\src\HojaDeRuta.c:113:25: error: incompatible type for argument 1 of 'mostrarUnaHojaDeRUTA'
+  113 |    mostrarUnaHojaDeRUTA(&auxHojaRuta);
+      |                         ^~~~~~~~~~~~
+      |                         |
+      |                         hojaDeRuta * {aka struct <anonymous> *}
+In file included from ..\src\HojaDeRuta.c:5:
+..\src\HojaDeRuta.h:36:38: note: expected 'hojaDeRuta' {aka 'struct <anonymous>'} but argument is of type 'hojaDeRuta *' {aka 'struct <anonymous> *'}
+   36 | void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta);
+      |                           ~~~~~~~~~~~^~~~~~~~
+..\src\HojaDeRuta.c: At top level:
+..\src\HojaDeRuta.c:145:6: error: conflicting types for 'mostrarUnaHojaDeRUTA'
+  145 | void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta[], int indice){
+      |      ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\HojaDeRuta.c:5:
+..\src\HojaDeRuta.h:36:6: note: previous declaration of 'mostrarUnaHojaDeRUTA' was here
+   36 | void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta);
+      |      ^~~~~~~~~~~~~~~~~~~~
+11:52:23 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'darAltaHojaDeRuta':
+..\src\HojaDeRuta.c:113:25: error: incompatible type for argument 1 of 'mostrarUnaHojaDeRUTA'
+  113 |    mostrarUnaHojaDeRUTA(&auxHojaRuta);
+      |                         ^~~~~~~~~~~~
+      |                         |
+      |                         hojaDeRuta * {aka struct <anonymous> *}
+In file included from ..\src\HojaDeRuta.c:5:
+..\src\HojaDeRuta.h:36:38: note: expected 'hojaDeRuta' {aka 'struct <anonymous>'} but argument is of type 'hojaDeRuta *' {aka 'struct <anonymous> *'}
+   36 | void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta);
+      |                           ~~~~~~~~~~~^~~~~~~~
+..\src\HojaDeRuta.c: At top level:
+..\src\HojaDeRuta.c:145:6: error: conflicting types for 'mostrarUnaHojaDeRUTA'
+  145 | void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta[], int indice){
+      |      ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\HojaDeRuta.c:5:
+..\src\HojaDeRuta.h:36:6: note: previous declaration of 'mostrarUnaHojaDeRUTA' was here
+   36 | void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta);
+      |      ^~~~~~~~~~~~~~~~~~~~
+11:53:00 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'darAltaHojaDeRuta':
+..\src\HojaDeRuta.c:113:25: error: incompatible type for argument 1 of 'mostrarUnaHojaDeRUTA'
+  113 |    mostrarUnaHojaDeRUTA(&auxHojaRuta);
+      |                         ^~~~~~~~~~~~
+      |                         |
+      |                         hojaDeRuta * {aka struct <anonymous> *}
+In file included from ..\src\HojaDeRuta.c:5:
+..\src\HojaDeRuta.h:36:38: note: expected 'hojaDeRuta' {aka 'struct <anonymous>'} but argument is of type 'hojaDeRuta *' {aka 'struct <anonymous> *'}
+   36 | void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta);
+      |                           ~~~~~~~~~~~^~~~~~~~
+11:53:25 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:53:29 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:55:48 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:55:52 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:56:14 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:56:16 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:56:59 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+11:57:00 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:57:16 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+11:59:40 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:03:06 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarUnaHojaDeRUTA':
+..\src\HojaDeRuta.c:185:14: error: invalid operands to binary != (have 'hojaDeRuta' {aka 'struct <anonymous>'} and 'void *')
+  185 |  if(HojaRuta != NULL){
+      |              ^~
+..\src\HojaDeRuta.c:183:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  183 |  int retorno = 0;
+      |      ^~~~~~~
+..\src\HojaDeRuta.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+12:03:13 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarUnaHojaDeRUTA':
+..\src\HojaDeRuta.c:185:14: error: invalid operands to binary != (have 'hojaDeRuta' {aka 'struct <anonymous>'} and 'void *')
+  185 |  if(HojaRuta != NULL){
+      |              ^~
+..\src\HojaDeRuta.c:183:6: warning: variable 'retorno' set but not used [-Wunused-but-set-variable]
+  183 |  int retorno = 0;
+      |      ^~~~~~~
+..\src\HojaDeRuta.c:195:1: warning: control reaches end of non-void function [-Wreturn-type]
+  195 | }
+      | ^
+12:03:29 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarUnaHojaDeRUTA':
+..\src\HojaDeRuta.c:185:14: error: invalid operands to binary != (have 'hojaDeRuta' {aka 'struct <anonymous>'} and 'void *')
+  185 |  if(HojaRuta != NULL){
+      |              ^~
+12:03:58 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarUnaHojaDeRUTA':
+..\src\HojaDeRuta.c:185:14: error: invalid operands to binary != (have 'hojaDeRuta' {aka 'struct <anonymous>'} and 'void *')
+  185 |  if(HojaRuta != NULL){
+      |              ^~
+12:04:01 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarUnaHojaDeRUTA':
+..\src\HojaDeRuta.c:185:14: error: invalid operands to binary != (have 'hojaDeRuta' {aka 'struct <anonymous>'} and 'void *')
+  185 |  if(HojaRuta != NULL){
+      |              ^~
+12:04:30 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c: In function 'mostrarUnaHojaDeRUTA':
+..\src\HojaDeRuta.c:185:14: error: invalid operands to binary != (have 'hojaDeRuta' {aka 'struct <anonymous>'} and 'void *')
+  185 |  if(HojaRuta != NULL){
+      |              ^~
+12:05:47 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:21:25 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Tipo.o" "..\\src\\Tipo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+12:25:45 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:25:49 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:26:02 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:26:05 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:26:13 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:26:16 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:44:28 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:44:31 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:46:35 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:46:38 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+12:46:58 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+..\src\Transporte.c: In function 'darAltaTransporte':
+..\src\Transporte.c:98:17: error: incompatible type for argument 1 of 'mostrarDatos'
+   98 |    mostrarDatos(auxtransporte, indice);
+      |                 ^~~~~~~~~~~~~
+      |                 |
+      |                 transporte {aka struct <anonymous>}
+In file included from ..\src\Transporte.c:4:
+..\src\Transporte.h:23:29: note: expected 'transporte *' {aka 'struct <anonymous> *'} but argument is of type 'transporte' {aka 'struct <anonymous>'}
+   23 | int mostrarDatos(transporte transportes[], int len);
+      |                  ~~~~~~~~~~~^~~~~~~~~~~~~
+12:47:42 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:49:15 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+12:49:19 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:04:44 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:04:47 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:08:10 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+13:14:04 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:14:08 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:15:01 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:15:05 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:16:06 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:16:09 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:16:42 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:16:43 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:22:52 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:22:56 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:23:40 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:25:12 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Tipo.o" "..\\src\\Tipo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:25:13 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:25:25 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Tipo.o" "..\\src\\Tipo.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:25:26 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:25:39 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Tipo.o" "..\\src\\Tipo.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:25:42 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+Info: Nothing to build for PrimerParcialLaboratorio
+13:32:45 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:32:50 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:35:05 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:35:05 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:37:12 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:37:16 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:40:12 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:40:15 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+Info: Nothing to build for PrimerParcialLaboratorio
+Info: Nothing to build for PrimerParcialLaboratorio
+13:42:28 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:42:29 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+13:43:32 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:43:36 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:45:00 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:45:02 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:46:55 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:47:04 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:47:04 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:48:56 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+..\src\HojaDeRuta.c:74:5: error: conflicting types for 'darAltaHojaDeRuta'
+   74 | int darAltaHojaDeRuta(hojaDeRuta HojaRuta[], transporte transportes[], int len, int lenT) {
+      |     ^~~~~~~~~~~~~~~~~
+In file included from ..\src\HojaDeRuta.c:5:
+..\src\HojaDeRuta.h:35:5: note: previous declaration of 'darAltaHojaDeRuta' was here
+   35 | int darAltaHojaDeRuta(hojaDeRuta HojaRuta[], transporte transportes[], int len);
+      |     ^~~~~~~~~~~~~~~~~
+13:49:16 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:154:7: error: too few arguments to function 'darAltaHojaDeRuta'
+  154 |       darAltaHojaDeRuta(hojasRuta, transportes, CANT_HOJADERUTA);
+      |       ^~~~~~~~~~~~~~~~~
+In file included from ..\src\PrimerParcialLaboratorio.c:6:
+..\src\HojaDeRuta.h:35:5: note: declared here
+   35 | int darAltaHojaDeRuta(hojaDeRuta HojaRuta[], transporte transportes[], int len, int lenT);
+      |     ^~~~~~~~~~~~~~~~~
+13:49:38 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+13:54:01 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:9:25: warning: passing argument 4 of 'importePorTransporte' makes pointer from integer without a cast [-Wint-conversion]
+    9 | #define CANT_TRANSPORTE 2
+      |                         ^
+      |                         |
+      |                         int
+..\src\PrimerParcialLaboratorio.c:224:72: note: in expansion of macro 'CANT_TRANSPORTE'
+  224 |       if(importePorTransporte(hojasRuta, transportes, CANT_HOJADERUTA, CANT_TRANSPORTE, &precioPortransporte)){
+      |                                                                        ^~~~~~~~~~~~~~~
+In file included from ..\src\PrimerParcialLaboratorio.c:7:
+..\src\Informes.h:13:91: note: expected 'float *' but argument is of type 'int'
+   13 | int importePorTransporte(hojaDeRuta hojaRuta[], transporte transportes[], int len, float *precioTotal);
+      |                                                                                    ~~~~~~~^~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:224:10: error: too many arguments to function 'importePorTransporte'
+  224 |       if(importePorTransporte(hojasRuta, transportes, CANT_HOJADERUTA, CANT_TRANSPORTE, &precioPortransporte)){
+      |          ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\PrimerParcialLaboratorio.c:7:
+..\src\Informes.h:13:5: note: declared here
+   13 | int importePorTransporte(hojaDeRuta hojaRuta[], transporte transportes[], int len, float *precioTotal);
+      |     ^~~~~~~~~~~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:9:25: warning: passing argument 5 of 'importePorTipoyFecha' makes pointer from integer without a cast [-Wint-conversion]
+    9 | #define CANT_TRANSPORTE 2
+      |                         ^
+      |                         |
+      |                         int
+..\src\PrimerParcialLaboratorio.c:246:79: note: in expansion of macro 'CANT_TRANSPORTE'
+  246 |       if(importePorTipoyFecha(transportes, hojasRuta, tipos, CANT_HOJADERUTA, CANT_TRANSPORTE, &precioPorTipo)){
+      |                                                                               ^~~~~~~~~~~~~~~
+In file included from ..\src\PrimerParcialLaboratorio.c:7:
+..\src\Informes.h:14:105: note: expected 'float *' but argument is of type 'int'
+   14 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                                                  ~~~~~~~^~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:246:10: error: too many arguments to function 'importePorTipoyFecha'
+  246 |       if(importePorTipoyFecha(transportes, hojasRuta, tipos, CANT_HOJADERUTA, CANT_TRANSPORTE, &precioPorTipo)){
+      |          ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\PrimerParcialLaboratorio.c:7:
+..\src\Informes.h:14:5: note: declared here
+   14 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |     ^~~~~~~~~~~~~~~~~~~~
+13:54:54 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+..\src\PrimerParcialLaboratorio.c: In function 'main':
+..\src\PrimerParcialLaboratorio.c:9:25: warning: passing argument 5 of 'importePorTipoyFecha' makes pointer from integer without a cast [-Wint-conversion]
+    9 | #define CANT_TRANSPORTE 2
+      |                         ^
+      |                         |
+      |                         int
+..\src\PrimerParcialLaboratorio.c:246:79: note: in expansion of macro 'CANT_TRANSPORTE'
+  246 |       if(importePorTipoyFecha(transportes, hojasRuta, tipos, CANT_HOJADERUTA, CANT_TRANSPORTE, &precioPorTipo)){
+      |                                                                               ^~~~~~~~~~~~~~~
+In file included from ..\src\PrimerParcialLaboratorio.c:7:
+..\src\Informes.h:14:105: note: expected 'float *' but argument is of type 'int'
+   14 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |                                                                                                  ~~~~~~~^~~~~~~~~~~
+..\src\PrimerParcialLaboratorio.c:246:10: error: too many arguments to function 'importePorTipoyFecha'
+  246 |       if(importePorTipoyFecha(transportes, hojasRuta, tipos, CANT_HOJADERUTA, CANT_TRANSPORTE, &precioPorTipo)){
+      |          ^~~~~~~~~~~~~~~~~~~~
+In file included from ..\src\PrimerParcialLaboratorio.c:7:
+..\src\Informes.h:14:5: note: declared here
+   14 | int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal);
+      |     ^~~~~~~~~~~~~~~~~~~~
+13:55:19 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:56:07 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:56:57 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+13:56:58 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+13:59:19 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:00:03 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:00:31 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:14:52 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\HojaDeRuta.o" "..\\src\\HojaDeRuta.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Tipo.o" "..\\src\\Tipo.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Transporte.o" "..\\src\\Transporte.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:14:53 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:15:30 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:15:31 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:15:40 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:15:41 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:15:50 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:16:08 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:16:09 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+Info: Nothing to build for PrimerParcialLaboratorio
+14:16:55 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio
+14:17:10 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:17:11 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:17:22 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:17:23 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:17:39 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:17:40 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:18:03 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:18:04 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:18:12 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:18:14 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:18:33 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\PrimerParcialLaboratorio.o" "..\\src\\PrimerParcialLaboratorio.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:18:34 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+14:26:39 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\Informes.o" "..\\src\\Informes.c" 
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+c:/mingw/bin/../lib/gcc/mingw32/9.2.0/../../../../mingw32/bin/ld.exe: cannot open output file PrimerParcialLaboratorio.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+14:26:45 **** Incremental Build of configuration Debug for project PrimerParcialLaboratorio ****
+Info: Internal Builder is used for build
+gcc -o PrimerParcialLaboratorio.exe "src\\HojaDeRuta.o" "src\\Informes.o" "src\\PrimerParcialLaboratorio.o" "src\\Tipo.o" "src\\Transporte.o" "src\\Validaciones.o" 
+Info: Nothing to build for PrimerParcialLaboratorio

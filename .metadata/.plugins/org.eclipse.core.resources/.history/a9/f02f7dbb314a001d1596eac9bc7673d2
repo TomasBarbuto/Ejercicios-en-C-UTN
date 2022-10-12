@@ -1,0 +1,261 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Transporte.h"
+#include "Tipo.h"
+#include "HojaDeRuta.h"
+#include "Validaciones.h"
+
+int idHojaDeRuta() {
+
+	static int idHojaDeRuta = 20000;
+	idHojaDeRuta++;
+
+	return idHojaDeRuta;
+}
+
+int inicializarHojaDeRuta(hojaDeRuta hojaRuta[], int len) {
+
+	int retorno = 0;
+
+	if (hojaRuta != NULL && len > 0) {
+
+		for (int i = 0; i < len; i++) {
+
+			hojaRuta[i].isEmpty = 0; //0 vacio 1 lleno.
+		}
+
+		retorno = 1;
+	}
+
+	return retorno;
+}
+
+int buscarVacioHojaRuta(hojaDeRuta HojaRuta[], int len) {
+
+	int retorno = -1;
+
+	if (HojaRuta != NULL && len > 0) {
+
+		for (int i = 0; i < len; i++) {
+
+			if (HojaRuta[i].isEmpty == 0) {
+
+				retorno = i; //ya encontre vacio, break.
+				break;
+			}
+
+		}
+
+	}
+
+	return retorno;
+}
+
+int darAltaHojaDeRuta(hojaDeRuta HojaRuta[], transporte transportes[], int len) {
+
+	int retorno = 0;
+	int confirm;
+	int indice;
+	int validacion;
+	hojaDeRuta auxHojaRuta;
+
+	if (HojaRuta != NULL && transportes != NULL && len > 0) {
+
+		do {
+			indice = buscarVacioHojaRuta(HojaRuta, len);
+
+			if (indice != -1) {
+
+				mostrarDatos(transportes, len);
+				system("pause");
+
+				getNumber(&auxHojaRuta.transporteId,
+						"\nSeleccione un transporte por su ID: ",
+						"Ese transporte no existe\n", 1000, 9999);
+
+				validacion = buscarIdTransporte(transportes, len, auxHojaRuta.transporteId);
+
+				if (validacion == 1) {
+
+					auxHojaRuta.idHoja = idHojaDeRuta() - 1;
+
+					getNumber(&auxHojaRuta.fecha.dia, "\nIngrese dia: ",
+							"Fecha no valida", 1, 31);
+
+					getNumber(&auxHojaRuta.fecha.mes, "\nIngrese mes: ",
+							"Fecha no valida", 1, 12);
+
+					getNumber(&auxHojaRuta.fecha.anio, "\nIngrese anio: ",
+							"Fecha no valida", 1, 22);
+
+					getFloat(&auxHojaRuta.kmsTotales,
+							"\nIngrese cantidad de kilometros: ",
+							"kilometros no validos\n", 50, 4000);
+
+					getFloat(&auxHojaRuta.precioViaje,
+							"\nIngrese el precio del viaje: ",
+							"Precio No valido\n", 1000, 999999);
+
+					auxHojaRuta.isEmpty = 1;
+				}else{
+
+					printf("\nEse ID no existe\n");
+					system("pause");
+				}
+
+			}
+
+
+		} while (validacion != 1);
+
+		do{
+			mostrarHojaDeRuta(&auxHojaRuta, len);
+
+			getNumber(&confirm,
+					"\nIngrese 1 si su seleccion es correcta o 0 si desea volver a elegir\nOpcion: ",
+					"\nOpcion no valida", 0, 1);
+		}while(confirm != 1);
+
+		HojaRuta[indice] = auxHojaRuta;
+		retorno = 1;
+	}
+
+	return retorno;
+}
+
+void mostrarHojaDeRuta(hojaDeRuta HojaRuta[], int len) {
+
+	for (int i = 0; i < len; i++) {
+
+		if (HojaRuta[i].isEmpty == 1) {
+
+			printf("\nid Hoja de ruta: %d\n", HojaRuta[i].idHoja);
+			printf("id transporte: %d\n", HojaRuta[i].transporteId);
+			printf("Kilometros: %.2f\n", HojaRuta[i].kmsTotales);
+			printf("Precio de viaje: %.2f\n", HojaRuta[i].precioViaje);
+			printf("fecha: %d / %d /%d \n", HojaRuta[i].fecha.dia,
+					HojaRuta[i].fecha.mes, HojaRuta[i].fecha.anio);
+
+		}
+	}
+
+}
+
+int mostrarHojasDeRutaPorFecha(hojaDeRuta hojaRuta[], int len) {
+
+	int retorno = 0;
+	fechas fecha;
+	int contador = 0;
+
+	if (hojaRuta != NULL && len > 0) {
+
+		getNumber(&fecha.dia, "\nSeleccione el dia\nDIA: ", "Dia no valido", 1,
+				31);
+
+		getNumber(&fecha.mes, "\nSeleccione el mes\nMES: ", "Dia no valido", 1,
+				12);
+
+		getNumber(&fecha.anio, "\nSeleccione el anio\nANIO: ", "Dia no valido",
+				1, 22);
+
+		for (int i = 0; i < len - 1; i++) {
+
+			if (fecha.dia == hojaRuta[i].fecha.dia
+					&& fecha.mes == hojaRuta[i].fecha.mes
+					&& fecha.anio == hojaRuta[i].fecha.anio
+					&& hojaRuta[i].isEmpty == 1) {
+
+				printf(
+						"\nEn la fecha %d/%d/%d se dio de alta la hoja de ruta: %d",
+						fecha.dia, fecha.mes, fecha.anio, hojaRuta[i].idHoja);
+				contador++;
+			}
+		}
+
+		if (contador > 0) {
+
+			retorno = 1;
+
+		} else {
+
+			retorno = 0; // retorna 0 si no hay hojas en esa fecha con ese ID.
+		}
+	}
+
+	return retorno;
+}
+
+int importePorTransporte(hojaDeRuta hojaRuta[], transporte transportes[],
+		int len, float *precioTotal) {
+
+	int retorno = 0;
+	int id;
+	float acumulador = 0;
+
+	if (hojaRuta != NULL && transportes != NULL && len > 0) {
+
+		mostrarDatos(transportes, len);
+		getNumber(&id, "Seleccione el transporte por ID\nSeleccion: ",
+				"\nEse ID es inexistente", 1000, 9999);
+
+		for (int i = 0; i < len - 1; i++) {
+
+			if (id == hojaRuta[i].transporteId) {
+
+				acumulador += hojaRuta[i].precioViaje;
+
+			}
+		}
+
+		*precioTotal = acumulador;
+
+		retorno = 1;
+	}
+
+	return retorno;
+}
+
+int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, float* precioTotal) {
+
+	int retorno = 0;
+	float acumulador = 0;
+	int tipo;
+	fechas fecha;
+
+	if (transportes != NULL && hojaRuta != NULL && len > 0) {
+
+		listTipos(tipos, 4);
+
+		getNumber(&tipo, "\nSeleccion un tipo de transporte\nTipo:",
+				"\nEse tipo no existe\n", 1000, 1003);
+
+		getNumber(&fecha.dia, "\nSeleccione el dia\nDIA: ", "Dia no valido", 1,
+						31);
+
+		getNumber(&fecha.mes, "\nSeleccione el mes\nMES: ", "Dia no valido", 1,
+						12);
+
+		getNumber(&fecha.anio, "\nSeleccione el anio\nANIO: ", "Dia no valido",
+						1, 22);
+
+		for (int i = 0; i < len - 1; i++) {
+			for( int j = 0; j < len -1; j++){
+
+				if(tipo == transportes[i].tipoId && transportes[i].idTransporte == hojaRuta[j].transporteId &&
+					fecha.dia == hojaRuta[j].fecha.dia && fecha.mes == hojaRuta[j].fecha.mes
+						&& fecha.anio == hojaRuta[j].fecha.anio){
+
+					acumulador += hojaRuta[j].precioViaje;
+
+				}
+			}
+		}
+
+		*precioTotal = acumulador;
+
+		retorno = 1;
+	}
+
+	return retorno;
+}
+

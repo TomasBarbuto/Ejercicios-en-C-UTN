@@ -1,0 +1,297 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Validaciones.h"
+#include "Tipo.h"
+#include "Transporte.h"
+#include "HojaDeRuta.h"
+#include "Informes.h"
+
+#define CANT_TRANSPORTE 2
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	int opcion; //variable de control del menu.
+	int opcionInformes; // variable de control de informes.
+	int cantidadTransportes = 0;
+	float precioPortransporte;
+	float precioPorTipo;
+	int flagListarTransportes = 0;
+	int flagHojaDeRuta = 0;
+
+	//declaramos las struct.
+	transporte transportes[CANT_TRANSPORTE];
+	tipo tipos[4]; //son 4 siempre no varia.
+	hojaDeRuta hojasRuta[CANT_TRANSPORTE];
+
+	//inicializamos todas las struct.
+	inicializarTransporte(transportes, CANT_TRANSPORTE); // le doy al campo isEmpty valor 0.
+	initTipos(tipos);	//Se crean los tipos harcodeados.
+	inicializarHojaDeRuta(hojasRuta, CANT_TRANSPORTE);	// le doy al campo isEmpty valor 0
+
+	do {
+
+		getNumber(&opcion, "\n\tBienvenido al Menu de transporte \n\n"
+				"¿Que accion desea realizar?\n\n"
+				"1-DAR DE ALTA\n"
+				"2-MODIFICAR\n"
+				"3-DAR DE BAJA\n"
+				"4-LISTAR TRANSPORTES\n"
+				"5-LISTAR TIPOS\n"
+				"6-DAR DE ALTA HOJA DE RUTA\n"
+				"7-LISTAR HOJAS DE RUTA\n"
+				"8-INFORMES\n"
+				"9-SALIR\n\nIngrese una opcion: ", "Opcion no valida\n", 1, 9);
+
+		switch (opcion) {
+
+		case 1:
+			if (!buscarEspacio(transportes, CANT_TRANSPORTE)) {
+
+				printf("Ya no hay espacios para mas transportes\n");
+				system("pause");
+
+			}else{
+
+				if(darAltaTransporte(transportes, CANT_TRANSPORTE)){
+
+					printf("Se dio de alta correctamente\n");
+					system("pause");
+					flagListarTransportes = 1;
+					cantidadTransportes ++;
+
+				}else{
+
+					printf("Ocurrio un ERROR, reitente darlo de alta\n");
+					system("pause");
+				}
+			}
+			break;
+		case 2:
+			if (flagListarTransportes == 1) {
+
+				if(modificartransporte(transportes, CANT_TRANSPORTE)){
+
+					printf("Se modifico correctamente\n");
+					system("pause");
+
+				}else{
+
+					printf("Ocurrio un error, reintente\n");
+					system("pause");
+
+				}
+
+			} else {
+
+				printf("Todavia no se cargaron datos\n");
+				system("pause");
+
+			}
+			break;
+
+		case 3:
+			if (flagListarTransportes == 1) {
+
+				if(!darBajaTransporte(transportes, CANT_TRANSPORTE)){
+
+					printf("Se dio de Baja exitosamente\n");
+					cantidadTransportes--;
+
+						if(cantidadTransportes == 0){
+
+							flagListarTransportes = 0;
+						}
+
+					system("pause");
+
+
+				}else{
+
+					printf("Ocurrio un error, reintente\n");
+					system("pause");
+				}
+
+			} else {
+				printf("Todavia no se cargaron datos\n");
+				system("pause");
+			}
+			break;
+
+		case 4:
+			if (flagListarTransportes == 1) {
+
+				if(orderStructByID(transportes, CANT_TRANSPORTE) && orderStructByDes(transportes, CANT_TRANSPORTE)
+				   &&mostrarDatos(transportes, CANT_TRANSPORTE)){
+
+				printf("Se ordeno correctamente\n");
+				system("pause");
+
+				}else{
+
+					printf("Ocurrio un error, reintente\n");
+					system("pause");
+				}
+
+			}else
+			{
+				printf("Todavia no se cargaron datos\n");
+				system("pause");
+			}
+			break;
+
+		case 5:
+			listTipos(tipos, 4);
+			system("pause");
+			break;
+
+		case 6:
+			if (flagListarTransportes == 1) {
+
+					if(buscarEspacioHojaDeRuta(hojasRuta, CANT_TRANSPORTE)){
+
+						darAltaHojaDeRuta(hojasRuta, transportes, CANT_TRANSPORTE);
+						flagHojaDeRuta = 1;
+				}else{
+
+					printf("Ya no hay espacio para cargar Hoja de Ruta\n");
+					system("pause");
+				}
+			} else {
+
+				printf("Todavia no se cargaron transportes para asignar\n");
+				system("pause");
+
+			}
+			break;
+
+		case 7:
+			if (flagHojaDeRuta == 1) {
+
+				if(!mostrarHojaDeRuta(hojasRuta, CANT_TRANSPORTE)){
+
+					printf("Todavia no se cargaron transportes para asignar\n");
+					system("pause");
+				}
+
+			}else{
+
+				printf("Todavia no se cargaron datos\n");
+				system("pause");
+			}
+			break;
+
+		case 8:
+			if(flagHojaDeRuta == 1 && flagListarTransportes == 1){
+
+				do {
+					getNumber(&opcionInformes,"\n\tBievenido al menu de Informes\n"
+					"\n¿Que informe desea ver?\n"
+					"1-Transportes por tipo de transportes\n"
+					"2-Hojas de ruta efectuadas en una fecha seleccionada\n"
+					"3-Importe total de las hojas de ruta realizadas en un transporte seleccionado\n"
+					"4-Importe total de todas las hojas de ruta de un tipo en una fecha seleccionada\n"
+					"5- Volver\n"
+					"Opcion: ", "Ingreso una opcion inexistente", 1, 5);
+
+					switch (opcionInformes) {
+
+					case 1:
+						if (mostrarTransportesPorTipo(transportes,CANT_TRANSPORTE)) {
+
+						} else {
+
+							printf("\nNo existen transportes cargados con el ID seleccionado\n");
+						}
+
+						system("pause");
+						break;
+
+					case 2:
+						if (mostrarHojasDeRutaPorFecha(hojasRuta, CANT_TRANSPORTE)) {
+
+						} else {
+
+							printf("\nNo existen Hojas de ruta dadas de alta en esa fecha\n");
+							system("pause");
+
+						}
+						system("pause");
+						break;
+
+					case 3:
+						if(importePorTransporte(hojasRuta, transportes, CANT_TRANSPORTE, &precioPortransporte)){
+
+							if (precioPortransporte > 0) {
+
+								printf( "Este transporte suma un valor recaudado de: $%.2f\n", precioPortransporte);
+								system("pause");
+
+							} else {
+
+								printf("No registra viajes hasta el momento\n");
+								system("pause");
+							}
+						}else{
+
+							printf("Ocurrio un error reintente\n");
+							system("pause");
+
+						}
+
+						break;
+
+					case 4:
+						if(importePorTipoyFecha(transportes, hojasRuta, tipos, CANT_TRANSPORTE, &precioPorTipo)){
+
+
+							if(precioPorTipo > 0){
+
+								printf("Este tipo de transporte en el dia de la fecha, suma"
+										"un valor recaudado de: $%.2f\n", precioPorTipo);
+								system("pause");
+
+							}else{
+
+								printf("No hay viajes registrados con ese tipo de transporte\n");
+								system("pause");
+
+							}
+						}else{
+
+							printf("Ocurrio un error reintente\n");
+							system("pause");
+
+						}
+						break;
+
+					case 5:
+						getNumber(&opcionInformes,"\nEsta seguro que desea salir del menu?\n\nIngrese 5 para confirmar\n"
+								"Ingrese 6 para continuar\nOPCION: ","Opcion no valida\n", 5, 6);
+
+						printf("Usted a salido del menu INFORMES\n");
+						system("pause");
+						break;
+					}
+
+				} while (opcionInformes != 5);
+			}else{
+
+				printf("No hay informes que mostrar aun\nComplete los campos anteriores\n");
+				system("pause");
+			}
+			break;
+
+		case 9:
+			getNumber(&opcion,
+					"\nEsta seguro que desea salir del menu?\n\nIngrese 9 para confirmar...\n"
+							"Ingrese 0 para continuar...\nOPCION: ",
+					"Opcion no valida\n", 0, 9);
+			printf("Usted a salido del MENU\n");
+			break;
+		}
+
+	} while (opcion != 9);
+
+	return EXIT_SUCCESS;
+}
