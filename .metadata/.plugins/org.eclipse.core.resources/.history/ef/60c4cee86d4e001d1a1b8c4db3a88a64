@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Confederaciones.h"
+
+#define CANT_CONFEDERACIONES 5
+void mostrarMenu(){
+
+	int retorno = 0;
+	//int opcion;
+	//int cantidadJugadores = 0;
+	eConfederacion arrayConfederaciones[CANT_CONFEDERACIONES];
+
+	iniciarConfederacion(arrayConfederaciones);
+	listarConfederaciones(arrayConfederaciones, CANT_CONFEDERACIONES);
+
+
+}

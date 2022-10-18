@@ -15,19 +15,19 @@ typedef struct{
 
 
 int idTransportes();
-int inicializarTransporte(transporte transportes[], int len);
-int buscarVacio(transporte transportes[], int len);
-int darAltaTransporte(transporte transportes[], int len);
-int buscarIdDeTransporte(transporte transportes[], int len, int id);
-int darBajaTransporte(transporte transportes[], int len);
-int mostrarDatos(transporte transportes[], int len);
-void mostrarDato(transporte transportes);
-int listarTransportes(transporte transportes[], int len);
-int modificartransporte(transporte transportes[], int len);
-int orderStructByID(transporte transportes[], int len);
-int orderStructByDes(transporte transportes[], int len);
-int buscarEspacio(transporte transportes[], int len);
-int buscarIdTransporte(transporte transportes[], int len, int id);
+int inicializarTransporte(transporte eTransportes[], int longitud);
+int buscarVacioTransporte(transporte eTransportes[], int longitud);
+int darAltaTransporte(transporte eTransportes[], int longitud);
+int buscarIdDeTransporte(transporte eTransportes[], int longitud, int id);
+int darBajaTransporte(transporte eTransportes[], int longitud);
+int mostrarDatos(transporte eTransportes[], int longitud);
+void mostrarDato(transporte eTransportes);
+int listarTransportes(transporte eTransportes[], int longitud);
+int modificarTransporte(transporte eTransportes[], int longitud);
+int ordenarTransportesPorID(transporte eTransportes[], int longitud);
+int ordenarTransportesPorDescripcion(transporte eTransportes[], int longitud);
+int buscarEspacio(transporte eTransportes[], int longitud);
+int buscarIdTransporte(transporte eTransportes[], int longitud, int id);
 
 
 #endif /* TRANSPORTE_H_ */

@@ -1,0 +1,287 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Validaciones.h"
+#include "Tipo.h"
+#include "Transporte.h"
+#include "HojaDeRuta.h"
+
+/**
+*\brief: Muestra los datos de un array de tipo transporte cuando haya coincidencia.
+*\param: Array de tipo transporte, Longitud del array.
+*\return: Retorna 1 si puede mostrar, Retorna 0 si no encontro coincidencias.
+**/
+int mostrarTransportesPorTipo(transporte transportes[], int len){
+
+	int retorno = 0;
+	int tipoId;
+	int contador = 0;
+
+	if(transportes != NULL && len > 0){
+
+		getNumber(&tipoId, "\nSeleccione el tipo de transporte que desea visualizar\n"
+				"1000-CAMION RECTO\n"
+				"1001-CAMION REMOLQUE\n"
+				"1002-CAMION SEMIRREMOLQUE\n"
+				"1003-CAMION ELEVADOR\n"
+				"Seleccion: ", "Tipo inexistente", 1000, 1003);
+
+		for(int i = 0; i < len; i++){
+
+			if(tipoId == transportes[i].tipoId && transportes[i].isEmpty == 1){
+
+				printf("\nEl transporte con ID: '%d' , es de del tipo seleccionado %d\n",
+						transportes[i].idTransporte, tipoId);
+				contador++;
+			}
+		}
+
+		if(contador > 0){
+
+			retorno = 1;
+
+		}else{
+
+			retorno = 0; // retorna 0 si no hay transporte con ese ID.
+		}
+	}
+
+	return retorno;
+}
+
+/**
+*\brief: Muestra los datos de un array de tipo hojaDeRuta cuando haya coincidencia con una fecha ingresada.
+*\param: Array de tipo hojaDeRuta, Longitud del array.
+*\return: Retorna 1 si puede mostrar, Retorna 0 si no encontro coincidencias.
+**/
+int mostrarHojasDeRutaPorFecha(hojaDeRuta hojaRuta[], int len) {
+
+	int retorno;
+	fechas fecha;
+	int contador = 0;
+
+	if (hojaRuta != NULL && len > 0) {
+
+		getNumber(&fecha.dia, "\nSeleccione el dia\nDIA: ", "Dia no valido", 1,
+				31);
+
+		getNumber(&fecha.mes, "\nSeleccione el mes\nMES: ", "Dia no valido", 1,
+				12);
+
+		getNumber(&fecha.anio, "\nSeleccione el anio\nANIO: ", "Dia no valido",
+				1, 22);
+
+		for (int i = 0; i < len; i++) {
+
+			if (fecha.dia == hojaRuta[i].fecha.dia
+					&& fecha.mes == hojaRuta[i].fecha.mes
+					&& fecha.anio == hojaRuta[i].fecha.anio
+					&& hojaRuta[i].isEmpty == 1) {
+
+				printf(
+						"\nEn la fecha %d/%d/%d se dio de alta la hoja de ruta: %d\n",
+						fecha.dia, fecha.mes, fecha.anio, hojaRuta[i].idHoja);
+				contador++;
+			}
+		}
+
+		if (contador > 0) {
+
+			retorno = 1;
+
+		} else {
+
+			retorno = 0; // retorna 0 si no hay hojas en esa fecha con ese ID.
+		}
+	}
+
+	return retorno;
+}
+
+/**
+*\brief: Muestra un dato del array de tipo hojaDeRuta cuando encuentre coincidencia con un campo de transporte.
+*\param: Array de tipo hojaDeRuta, Array de tipo transporte, Longitud de primer array, Longitud de segundo array
+*\param: Puntero a flotante.
+*\return: Retorna 1 si encuentra coincidencias, Retorna 0 si no encuentra coincidencias.
+**/
+int importePorTransporte(hojaDeRuta hojaRuta[], transporte transportes[],
+		int len,int lenT, float *precioTotal) {
+
+	int retorno = 0;
+	int id;
+	float acumulador = 0;
+
+	if (hojaRuta != NULL && transportes != NULL && len > 0 && lenT > 0) {
+
+		mostrarDatos(transportes, lenT);
+		getNumber(&id, "Seleccione el transporte por ID\nSeleccion: ",
+				"\nEse ID es inexistente", 1000, 9999);
+
+		for (int i = 0; i < len; i++) {
+
+			if (id == hojaRuta[i].transporteId) {
+
+				acumulador += hojaRuta[i].precioViaje;
+
+			}
+		}
+
+		*precioTotal = acumulador;
+
+		retorno = 1;
+	}
+
+	return retorno;
+}
+
+/**
+*\brief:Muestra un dato(Precio) del array de tipo hojaDeRuta, cuando coincida con un campo(tipoID) de transporte.
+*\param:Array de tipo hojaDeRuta, Array de tipo transporte, Longitud de primer array, Longitud de segundo array
+*\param: Puntero a flotante.
+*\return:Retorna 1 si encuentra coincidencias, Retorna 0 si no encuentra coincidencias.
+**/
+int importePorTipoyFecha(transporte transportes[], hojaDeRuta hojaRuta[], tipo tipos[], int len, int lenT,
+		float* precioTotal) {
+
+	int retorno = 0;
+	float acumulador = 0;
+	int tipo;
+	fechas fecha;
+
+	if (transportes != NULL && hojaRuta != NULL && tipos != NULL && len > 0 && lenT > 0) {
+
+		listTipos(tipos, 4);
+
+		getNumber(&tipo, "\nSeleccion un tipo de transporte\nTipo:",
+				"\nEse tipo no existe\n", 1000, 1003);
+
+		getNumber(&fecha.dia, "\nSeleccione el dia\nDIA: ", "Dia no valido", 1,
+						31);
+
+		getNumber(&fecha.mes, "\nSeleccione el mes\nMES: ", "Dia no valido", 1,
+						12);
+
+		getNumber(&fecha.anio, "\nSeleccione el anio\nANIO: ", "Dia no valido",
+						1, 22);
+
+		for (int i = 0; i < lenT; i++) {
+			for( int j = 0; j < len; j++){
+
+				if(tipo == transportes[i].tipoId && transportes[i].idTransporte == hojaRuta[j].transporteId &&
+					fecha.dia == hojaRuta[j].fecha.dia && fecha.mes == hojaRuta[j].fecha.mes
+						&& fecha.anio == hojaRuta[j].fecha.anio){
+
+					acumulador += hojaRuta[j].precioViaje;
+
+				}
+			}
+		}
+
+		*precioTotal = acumulador;
+
+		retorno = 1;
+	}
+
+	return retorno;
+}
+
+void mostrarMenuInformes(transporte transportes[], hojaDeRuta hojasRuta[], tipo tipos[], int lenT, int lenH, int lenTy,
+		float* precioPorTipo, float* precioPortransporte){
+
+	int opcionInformes;
+
+	do {
+		getNumber(&opcionInformes,"\n\tBievenido al menu de Informes\n"
+		"\n¿Que informe desea ver?\n"
+		"1-Transportes por tipo de transportes\n"
+		"2-Hojas de ruta efectuadas en una fecha seleccionada\n"
+		"3-Importe total de las hojas de ruta realizadas en un transporte seleccionado\n"
+		"4-Importe total de todas las hojas de ruta de un tipo en una fecha seleccionada\n"
+		"5- Volver\n"
+		"Opcion: ", "Ingreso una opcion inexistente", 1, 5);
+
+		switch (opcionInformes) {
+
+		case 1:
+			if (mostrarTransportesPorTipo(transportes, lenT)) {
+
+			} else {
+
+				printf("\nNo existen transportes cargados con el ID seleccionado\n");
+			}
+
+			system("pause");
+			break;
+
+		case 2:
+			if (mostrarHojasDeRutaPorFecha(hojasRuta, lenH)) {
+
+			} else {
+
+				printf("\nNo existen Hojas de ruta dadas de alta en esa fecha\n");
+				system("pause");
+
+			}
+			system("pause");
+			break;
+
+		case 3:
+			if(importePorTransporte(hojasRuta, transportes, lenH,
+					lenT, *precioPortransporte)){
+
+				if (precioPortransporte > 0) {
+
+					printf( "Este transporte suma un valor recaudado de: $%.2f\n", *precioPortransporte);
+					system("pause");
+
+				} else {
+
+					printf("No registra viajes hasta el momento\n");
+					system("pause");
+				}
+			}else{
+
+				printf("Ocurrio un error reintente\n");
+				system("pause");
+
+			}
+
+			break;
+
+		case 4:
+			if(importePorTipoyFecha(transportes, hojasRuta, tipos, lenH,
+					lenT, &precioPorTipo)){
+
+
+				if(precioPorTipo > 0){
+
+					printf("Este tipo de transporte en el dia de la fecha, suma"
+							" un valor recaudado de: $%.2f\n", precioPorTipo);
+					system("pause");
+
+				}else{
+
+					printf("No hay viajes registrados con ese tipo de transporte\n");
+					system("pause");
+
+				}
+			}else{
+
+				printf("Ocurrio un error reintente\n");
+				system("pause");
+
+			}
+			break;
+
+		case 5:
+
+			getNumber(&opcionInformes,"\nEsta seguro que desea salir del menu?\n"
+					"\nIngrese 5 para confirmar\n"
+					"Ingrese 6 para continuar\nOPCION: ","Opcion no valida\n", 5, 6);
+
+			printf("Usted a salido del menu INFORMES\n");
+			system("pause");
+			break;
+		}
+
+	} while (opcionInformes != 5);
+}

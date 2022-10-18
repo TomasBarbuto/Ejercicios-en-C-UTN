@@ -29,11 +29,11 @@ typedef struct{
 }hojaDeRuta;
 
 int idHojaDeRuta();
-int inicializarHojaDeRuta(hojaDeRuta hojaRuta[], int len);
-int buscarVacioHojaRuta(hojaDeRuta HojaRuta[], int len);
-int buscarEspacioHojaDeRuta(hojaDeRuta hojaRuta[], int len);
-int darAltaHojaDeRuta(hojaDeRuta HojaRuta[], transporte transportes[], int len, int lenT);
-int mostrarHojaDeRuta(hojaDeRuta HojaRuta[], int len);
-void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta);
+int inicializarHojaDeRuta(hojaDeRuta eHojasDeRuta[], int longitud);
+int buscarVacioHojasDeRuta(hojaDeRuta eeHojasDeRuta[], int longitud);
+int buscarEspacioHojaDeRuta(hojaDeRuta eHojasDeRuta[], int longitud);
+int darAltaHojaDeRuta(hojaDeRuta eHojasDeRuta[], transporte transportes[], int longitudHojasDeRuta, int longitudTransporte);
+int mostrarHojaDeRuta(hojaDeRuta eHojasDeRuta[], int longitud);
+void mostrarUnaHojaDeRUTA(hojaDeRuta eHojasDeRuta);
 
 #endif /* HOJADERUTA_H_ */

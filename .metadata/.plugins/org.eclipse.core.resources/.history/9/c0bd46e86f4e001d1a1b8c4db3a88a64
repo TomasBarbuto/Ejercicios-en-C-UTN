@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Confederaciones.h"
+#include "Validaciones.h"
+
+#define CANT_CONFEDERACIONES 6
+int mostrarMenu(){
+
+	int retorno = 0;
+	int opcion;
+	int confimar;
+	//int cantidadJugadores = 0;
+	eConfederacion arrayConfederaciones[CANT_CONFEDERACIONES];
+
+	iniciarConfederacion(arrayConfederaciones);
+	listarConfederaciones(arrayConfederaciones, CANT_CONFEDERACIONES);
+
+
+	do{
+
+		getNumber(&opcion, "\n\tBienvenido al menu de la FIFA \n\n"
+						"¿Que accion desea realizar?\n\n"
+						"1-ALTA DE JUGADOR\n"
+						"2-BAJA DE JUGADOR\n"
+						"3-MODIFICACIÓN DE JUGADOR\n"
+						"4-INFORMES\n"
+						"5-SALIR\n"
+						"\n\nIngrese una opcion: ", "Opcion no valida\n", 1, 5);
+
+		getString(&confimar, "\nIngrese SI si desea finalizar el programa\n", "No ingreso algo valido", 2);
+
+	}while(opcion != 5 && confimar != "SI");
+
+	return retorno;
+}

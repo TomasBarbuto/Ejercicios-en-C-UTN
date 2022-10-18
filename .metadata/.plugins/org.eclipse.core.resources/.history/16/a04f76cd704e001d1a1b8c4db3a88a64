@@ -1,0 +1,17 @@
+#include "Jugadores.h"
+
+
+int inicializarJugadores(eJugador eTransportes[], int longitud) {
+
+	int retorno = 0;
+
+	if (eTransportes != NULL && longitud > 0) {
+
+		for (int i = 0; i < longitud; i++) {
+
+			eTransportes[i].isEmpty = 0; //0 vacio 1 llongitudo.
+		}
+		retorno = 1;
+	}
+	return retorno;
+}

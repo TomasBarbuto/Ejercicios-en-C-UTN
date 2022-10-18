@@ -1,0 +1,111 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Confederaciones.h"
+#include "Validaciones.h"
+#include "Jugadores.h"
+
+
+
+int inicializarJugadores(eJugador arrayJugadores[], int longitud) {
+
+	int retorno = 0;
+
+	if (arrayJugadores != NULL && longitud > 0) {
+
+		for (int i = 0; i < longitud; i++) {
+
+			arrayJugadores[i].isEmpty = 0; // 0.VACIO 1.LLENO
+		}
+		retorno = 1;
+	}
+	return retorno;
+}
+
+int idJugador() {
+
+	static int idJugadores = 0;
+	idJugadores++;
+
+	return idJugadores;
+}
+
+int buscarVacioJugadores(eJugador arrayJugadores[], int longitud) {
+
+	int retorno = -1;
+
+	if (arrayJugadores != NULL && longitud > 0) {
+
+		for (int i = 0; i < longitud; i++) {
+
+			if (arrayJugadores[i].isEmpty == 0) {
+
+				retorno = i; //ya encontre vacio, break.
+				break;
+			}
+		}
+	}
+	return retorno;
+}
+
+void mostrarDato(eJugador arrayJugadores){
+
+	printf("\nID Jugador: %d\n", arrayJugadores.id);
+	printf("Nombre: %s\n", arrayJugadores.nombre);
+	printf("Posicion: %s\n", arrayJugadores.posicion);
+	printf("Numero de camiseta: %d\n", arrayJugadores.numeroCamiseta);
+	printf("ID Confederacion: %d\n", arrayJugadores.idConfederacion);
+	printf("Salario: %.2f\n", arrayJugadores.salario);
+	printf("Anios de contrato: %d\n", arrayJugadores.aniosContrato);
+};
+
+
+int darAltaJugador(eJugador arrayJugadores[], int longitud) {
+
+	int retorno = 0;
+	int indice;
+	int confirmar;
+	eJugador auxJugador;
+
+	if (arrayJugadores != NULL && longitud > 0) {
+
+		do{
+			indice = buscarVacioJugadores(arrayJugadores, longitud);
+
+			if(indice != -1){
+
+				auxJugador.id = idJugador();
+
+				getString(&auxJugador.nombre, "\nIngrese Nombre: ",
+						"\nSupero los caracteres aceptados\n", 50);
+
+				getString(&auxJugador.posicion, "\nIngrese Posicion: ",
+						"\nSupero los caracteres aceptados\n", 50);
+
+				getShort(&auxJugador.numeroCamiseta, "\nIngrese Numero de camiseta entre 1-30: ", "\nNo es posible ese numero\n", 1, 30);
+
+				listarConfederaciones(arrayJugadores[],6);
+
+				getNumber(&auxJugador.idConfederacion, "\nSeleccione confederacion por ID: ", "\nID No valido\n", 100, 105);
+
+				getFloatSinLimite(&auxJugador.salario, "\nIngrese Salario: ", "\nA ocurrido un error Inesperado\n");
+
+				getShort(&auxJugador.aniosContrato, "\nIngrese los anion de contrato: ", "\nNo es posible tener tantos años de contrato\n",
+						1, 5);
+
+				auxJugador.isEmpty = 1;
+
+			}
+			mostrarDato(auxJugador);
+
+			getNumber(&confirmar, "\nIngrese 1 si los datos ingresados son correctos o 0 si desea volver a cargar\n"
+					"Opcion: ", "\nNo ingreso algo valido\n", 0, 1);
+
+		}while(confirmar != 1);
+
+		arrayJugadores[indice] = auxJugador;
+		retorno = 1;
+	}
+
+	return retorno;
+}
+

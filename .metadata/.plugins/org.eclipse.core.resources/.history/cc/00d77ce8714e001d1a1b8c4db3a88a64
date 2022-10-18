@@ -1,0 +1,97 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Confederaciones.h"
+#include "Validaciones.h"
+#include "Jugadores.h"
+
+
+
+int inicializarJugadores(eJugador Jugadores[], int longitud) {
+
+	int retorno = 0;
+
+	if (Jugadores != NULL && longitud > 0) {
+
+		for (int i = 0; i < longitud; i++) {
+
+			Jugadores[i].isEmpty = 0; // 0.VACIO 1.LLENO
+		}
+		retorno = 1;
+	}
+	return retorno;
+}
+
+int idJugador() {
+
+	static int idJugadores = 0;
+	idJugadores++;
+
+	return idJugadores;
+}
+
+int buscarVacioJugadores(eJugador Jugadores[], int longitud) {
+
+	int retorno = -1;
+
+	if (Jugadores != NULL && longitud > 0) {
+
+		for (int i = 0; i < longitud; i++) {
+
+			if (Jugadores[i].isEmpty == 0) {
+
+				retorno = i; //ya encontre vacio, break.
+				break;
+			}
+		}
+	}
+	return retorno;
+}
+
+int darAltaTransporte(eJugador Jugadores[], int longitud) {
+
+	int retorno = 0;
+	int indice;
+	int confirm;
+	eJugador auxJugador;
+
+	if (Jugadores != NULL && longitud > 0) {
+
+		do{
+			indice = buscarVacioTransporte(Jugadores, longitud);
+
+			if(indice != -1){
+
+				auxJugador.id = idJugador();
+
+				getString(auxJugador.descripcion, "\nIngrese descripcion: ",
+						"Se paso de texto", 1024);
+
+				getNumber(&auxJugador.pesoCarga, "\nIngrese el pesoCarga: ",
+						"Imposible llevar esos KG", 1, 1000000);
+
+				getNumber(&auxJugador.cantidadBultos,
+						"\nIngrese cantidadBultos:",
+						"Imposible llevar esa cantidad de bultos", 1, 10000);
+
+				getNumber(&auxJugador.tipoId, "\nSeleccione tipo de transporte\n"
+						"\n1000: 'CAMION RECTO'\n"
+						"1001: 'CAMION REMOLQUE'\n"
+						"1002: 'CAMION SEMIRREMOLQUE'\n"
+						"1003: 'CAMION ELEVADOR'\nTIPO: ", "\nID No valido\n", 1000, 1003);
+
+				auxtransporte.isEmpty = 1;
+
+			}
+			mostrarDato(auxtransporte);
+			getNumber(&confirm, "\nIngrese 1 si los datos ingresados son correctos o 0 si desea volver a cargar\n"
+					"Opcion: ", "\nNo ingreso algo valido\n",0 , 1);
+
+		}while(confirm != 1);
+
+		eTransportes[indice] = auxtransporte;
+		retorno = 1;
+	}
+
+	return retorno;
+}
+

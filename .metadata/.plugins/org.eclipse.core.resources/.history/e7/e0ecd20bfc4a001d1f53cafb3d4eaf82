@@ -1,0 +1,214 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Validaciones.h"
+#include "Tipo.h"
+#include "Transporte.h"
+#include "HojaDeRuta.h"
+#include "Informes.h"
+
+#define CANT_TRANSPORTE 2
+#define CANT_HOJADERUTA 8
+
+int main(void) {
+	setbuf(stdout, NULL);
+
+	int opcion; //variable de control del menu.
+	int opcionInformes; // variable de control de informes.
+	int cantidadTransportes = 0;
+	float precioPortransporte;
+	float precioPorTipo;
+	int flagListarTransportes = 0;
+	int flagHojaDeRuta = 0;
+
+	//declaramos las struct.
+	transporte transportes[CANT_TRANSPORTE];
+	tipo tipos[4]; //son 4 siempre no varia.
+	hojaDeRuta hojasRuta[CANT_HOJADERUTA];
+
+	//inicializamos todas las struct.
+	if(inicializarTransporte(transportes, CANT_TRANSPORTE) && initTipos(tipos) &&
+	   inicializarHojaDeRuta(hojasRuta, CANT_HOJADERUTA)){
+
+		printf("\t\t********* Se crearon las herramientas correspondientes para ejecutar el programa **********\n\n"
+				"\t\t     _____________________________________________________________________________\n");
+		system("pause");
+	}
+
+	do {
+
+		if(getNumber(&opcion, "\n\tBienvenido al Menu de transporte \n\n"
+				"¿Que accion desea realizar?\n\n"
+				"1-DAR DE ALTA\n"
+				"2-MODIFICAR\n"
+				"3-DAR DE BAJA\n"
+				"4-LISTAR TRANSPORTES\n"
+				"5-LISTAR TIPOS\n"
+				"6-DAR DE ALTA HOJA DE RUTA\n"
+				"7-LISTAR HOJAS DE RUTA\n"
+				"8-INFORMES\n"
+				"9-SALIR\n\nIngrese una opcion: ", "Opcion no valida\n", 1, 9)){
+
+			switch (opcion) {
+
+			case 1:
+				if (!buscarEspacio(transportes, CANT_TRANSPORTE)) {
+
+					printf("Ya no hay espacios para mas transportes\n");
+					system("pause");
+
+				}else{
+
+					if(darAltaTransporte(transportes, CANT_TRANSPORTE)){
+
+						printf("Se dio de alta correctamente\n");
+						system("pause");
+						flagListarTransportes = 1;
+						cantidadTransportes ++;
+
+					}else{
+
+						printf("Ocurrio un ERROR, reitente darlo de alta\n");
+						system("pause");
+					}
+				}
+				break;
+			case 2:
+				if (flagListarTransportes == 1) {
+
+					if(modificartransporte(transportes, CANT_TRANSPORTE)){
+
+						printf("Se modifico correctamente\n");
+						system("pause");
+
+					}else{
+
+						printf("Ocurrio un error, reintente\n");
+						system("pause");
+
+					}
+
+				} else {
+
+					printf("Todavia no se cargaron datos\n");
+					system("pause");
+
+				}
+				break;
+
+			case 3:
+				if (flagListarTransportes == 1) {
+
+					if(!darBajaTransporte(transportes, CANT_TRANSPORTE)){
+
+						printf("Se dio de Baja exitosamente\n");
+						cantidadTransportes--;
+
+							if(cantidadTransportes == 0){
+
+								flagListarTransportes = 0;
+							}
+
+						system("pause");
+
+					}else{
+
+						printf("Ocurrio un error, reintente\n");
+						system("pause");
+					}
+
+				} else {
+
+					printf("Todavia no se cargaron datos\n");
+					system("pause");
+				}
+				break;
+
+			case 4:
+				if (flagListarTransportes == 1) {
+
+					if(orderStructByID(transportes, CANT_TRANSPORTE) && orderStructByDes(transportes, CANT_TRANSPORTE)
+					   &&mostrarDatos(transportes, CANT_TRANSPORTE)){
+
+					printf("Se ordeno correctamente\n");
+					system("pause");
+
+					}else{
+
+						printf("Ocurrio un error, reintente\n");
+						system("pause");
+					}
+
+				}else{
+
+					printf("Todavia no se cargaron datos\n");
+					system("pause");
+
+				}
+				break;
+
+			case 5:
+				listTipos(tipos, 4);
+				system("pause");
+				break;
+
+			case 6:
+				if (flagListarTransportes == 1) {
+
+						if(buscarEspacioHojaDeRuta(hojasRuta, CANT_HOJADERUTA)){
+
+							darAltaHojaDeRuta(hojasRuta, transportes, CANT_HOJADERUTA, CANT_TRANSPORTE);
+							flagHojaDeRuta = 1;
+					}else{
+
+						printf("Ya no hay espacio para cargar Hoja de Ruta\n");
+						system("pause");
+					}
+				} else {
+
+					printf("Todavia no se cargaron transportes para asignar\n");
+					system("pause");
+
+				}
+				break;
+
+			case 7:
+				if (flagHojaDeRuta == 1) {
+
+					if(!mostrarHojaDeRuta(hojasRuta, CANT_HOJADERUTA)){
+
+						printf("Todavia no se cargaron transportes para asignar\n");
+						system("pause");
+					}
+
+				}else{
+
+					printf("Todavia no se cargaron datos\n");
+					system("pause");
+				}
+				break;
+
+			case 8:
+				if(flagHojaDeRuta == 1 && flagListarTransportes == 1){
+
+					mostrarMenuInformes(transportes, hojasRuta, tipos, CANT_TRANSPORTE, CANT_HOJADERUTA, 4,
+							precioPorTipo, precioPortransporte);
+				}else{
+
+					printf("No hay informes que mostrar aun\nComplete los campos anteriores\n");
+					system("pause");
+				}
+				break;
+
+			case 9:
+				getNumber(&opcion,
+						"\nEsta seguro que desea salir del menu?\n\nIngrese 9 para confirmar...\n"
+								"Ingrese 0 para continuar...\nOPCION: ",
+						"Opcion no valida\n", 0, 9);
+				printf("Usted a salido del MENU\n");
+				break;
+			}
+		}
+	} while (opcion != 9);
+
+	return EXIT_SUCCESS;
+}

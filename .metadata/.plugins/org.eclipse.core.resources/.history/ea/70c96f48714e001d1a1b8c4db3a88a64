@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Confederaciones.h"
+#include "Validaciones.h"
+#include "Jugadores.h"
+
+
+
+int inicializarJugadores(eJugador Jugadores[], int longitud) {
+
+	int retorno = 0;
+
+	if (Jugadores != NULL && longitud > 0) {
+
+		for (int i = 0; i < longitud; i++) {
+
+			Jugadores[i].isEmpty = 0; // 0.VACIO 1.LLENO
+		}
+		retorno = 1;
+	}
+	return retorno;
+}

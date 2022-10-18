@@ -23,20 +23,20 @@ int idHojaDeRuta() {
 *\param: Array de tipo hojaDeRUTA, longitud del Array.
 *\return: Retorna 1 si funciono y 0 si ocurre algun error.
 **/
-int inicializarHojaDeRuta(hojaDeRuta hojaRuta[], int len) {
+int inicializarHojaDeRuta(hojaDeRuta eHojasDeRuta[], int longitudHojasDeRuta) {
 
 	int retorno = 0;
 
-	if (hojaRuta != NULL && len > 0) {
+	if (eHojasDeRuta != NULL && longitudHojasDeRuta > 0) {
 
-		for (int i = 0; i < len; i++) {
+		for (int i = 0; i < longitudHojasDeRuta; i++) {
 
-			hojaRuta[i].isEmpty = 0; //0 vacio 1 lleno.
+			eHojasDeRuta[i].isEmpty = 0; //0 vacio 1 llongitudHojasDeRutao.
 		}
 
 		retorno = 1;
-	}
 
+	}
 	return retorno;
 }
 
@@ -45,22 +45,20 @@ int inicializarHojaDeRuta(hojaDeRuta hojaRuta[], int len) {
 *\param: Array de tipo hojaDeRuta, longitud del array.
 *\return: Retorna el indice vacio  y -1 si no encontro.
 **/
-int buscarVacioHojaRuta(hojaDeRuta HojaRuta[], int len) {
+int buscarVacioeHojasDeRuta(hojaDeRuta eHojasDeRuta[], int longitudHojasDeRuta) {
 
 	int retorno = -1;
 
-	if (HojaRuta != NULL && len > 0) {
+	if (eHojasDeRuta != NULL && longitudHojasDeRuta > 0) {
 
-		for (int i = 0; i < len; i++) {
+		for (int i = 0; i < longitudHojasDeRuta; i++) {
 
-			if (HojaRuta[i].isEmpty == 0) {
+			if (eHojasDeRuta[i].isEmpty == 0) {
 
 				retorno = i; //ya encontre vacio, break.
 				break;
 			}
-
 		}
-
 	}
 
 	return retorno;
@@ -71,76 +69,75 @@ int buscarVacioHojaRuta(hojaDeRuta HojaRuta[], int len) {
 *\param: Array de tipo hojaDeRuta, longitud del array.
 *\return: Retorna 1 si encontro espacio y 0 si no encontro.
 **/
-int darAltaHojaDeRuta(hojaDeRuta HojaRuta[], transporte transportes[], int len, int lenT) {
+int darAltaHojaDeRuta(hojaDeRuta eHojasDeRuta[], transporte transportes[], int longitudHojasDeRuta,
+		int longitudTransportes) {
 
 	int retorno = 0;
 	int confirm;
 	int indice;
 	int validacion;
-	hojaDeRuta auxHojaRuta;
+	hojaDeRuta auxeHojasDeRuta;
 
-	if (HojaRuta != NULL && transportes != NULL && len > 0 && lenT > 0) {
+	if (eHojasDeRuta != NULL && transportes != NULL && longitudHojasDeRuta > 0 && longitudTransportes > 0) {
 
 		do {
-			indice = buscarVacioHojaRuta(HojaRuta, len);
+			indice = buscarVacioeHojasDeRuta(eHojasDeRuta, longitudHojasDeRuta);
 
 			if (indice != -1) {
 
-				mostrarDatos(transportes, lenT);
+				mostrarDatos(transportes, longitudTransportes);
 				system("pause");
 
-				getNumber(&auxHojaRuta.transporteId,
+				getNumber(&auxeHojasDeRuta.transporteId,
 						"\nSeleccione un transporte por su ID: ",
 						"Ese transporte no existe\n", 1000, 9999);
 
-				validacion = buscarIdTransporte(transportes, lenT, auxHojaRuta.transporteId);
+				validacion = buscarIdTransporte(transportes, longitudTransportes, auxeHojasDeRuta.transporteId);
 
 				if (validacion == 1) {
 
-					auxHojaRuta.idHoja = idHojaDeRuta() - 1;
+					auxeHojasDeRuta.idHoja = idHojaDeRuta() - 1;
 
-					getNumber(&auxHojaRuta.fecha.dia, "\nIngrese dia: ",
+					getNumber(&auxeHojasDeRuta.fecha.dia, "\nIngrese dia: ",
 							"Fecha no valida", 1, 31);
 
-					getNumber(&auxHojaRuta.fecha.mes, "\nIngrese mes: ",
+					getNumber(&auxeHojasDeRuta.fecha.mes, "\nIngrese mes: ",
 							"Fecha no valida", 1, 12);
 
-					getNumber(&auxHojaRuta.fecha.anio, "\nIngrese anio: ",
+					getNumber(&auxeHojasDeRuta.fecha.anio, "\nIngrese anio: ",
 							"Fecha no valida", 1, 22);
 
-					getFloat(&auxHojaRuta.kmsTotales,
+					getFloat(&auxeHojasDeRuta.kmsTotales,
 							"\nIngrese cantidad de kilometros: ",
 							"kilometros no validos\n", 50, 4000);
 
-					getFloat(&auxHojaRuta.precioViaje,
+					getFloat(&auxeHojasDeRuta.precioViaje,
 							"\nIngrese el precio del viaje: ",
 							"Precio No valido\n", 1000, 999999);
 
-					auxHojaRuta.isEmpty = 1;
+					auxeHojasDeRuta.isEmpty = 1;
 
 				}else{
 
 					printf("\nEse ID no existe\n");
 					system("pause");
 				}
-
 			}
 
-
-		} while (validacion != 1);
+		}while(validacion != 1);
 
 		do{
-			mostrarUnaHojaDeRUTA(auxHojaRuta);
 
+			mostrarUnaHojaDeRUTA(auxeHojasDeRuta);
 			getNumber(&confirm,
 					"\nIngrese 1 si su seleccion es correcta o 0 si desea volver a elegir\nOpcion: ",
 					"\nOpcion no valida", 0, 1);
+
 		}while(confirm != 1);
 
-		HojaRuta[indice] = auxHojaRuta;
+		eHojasDeRuta[indice] = auxeHojasDeRuta;
 		retorno = 1;
 	}
-
 	return retorno;
 }
 
@@ -149,23 +146,22 @@ int darAltaHojaDeRuta(hojaDeRuta HojaRuta[], transporte transportes[], int len, 
 *\param: Array de tipo hojaDeRuta, longitud del array.
 *\return: Retorna 1 si puede mostrar, Retorna 0 si ocurrio un error.
 **/
-int mostrarHojaDeRuta(hojaDeRuta HojaRuta[], int len) {
+int mostrarHojaDeRuta(hojaDeRuta eHojasDeRuta[], int longitudHojasDeRuta) {
 
 	int retorno = 0;
 
-	if(HojaRuta != NULL && len > 0){
-		for (int i = 0; i < len; i++) {
+	if(eHojasDeRuta != NULL && longitudHojasDeRuta > 0){
+		for (int i = 0; i < longitudHojasDeRuta; i++) {
 
-			if (HojaRuta[i].isEmpty == 1) {
+			if (eHojasDeRuta[i].isEmpty == 1) {
 
-				printf("\nid Hoja de ruta: %d\n", HojaRuta[i].idHoja);
-				printf("id transporte: %d\n", HojaRuta[i].transporteId);
-				printf("Kilometros: %.2f\n", HojaRuta[i].kmsTotales);
-				printf("Precio de viaje: %.2f\n", HojaRuta[i].precioViaje);
-				printf("fecha: %d / %d /%d \n", HojaRuta[i].fecha.dia,
-						HojaRuta[i].fecha.mes, HojaRuta[i].fecha.anio);
+				printf("\nid Hoja de ruta: %d\n", eHojasDeRuta[i].idHoja);
+				printf("id transporte: %d\n", eHojasDeRuta[i].transporteId);
+				printf("Kilometros: %.2f\n", eHojasDeRuta[i].kmsTotales);
+				printf("Precio de viaje: %.2f\n", eHojasDeRuta[i].precioViaje);
+				printf("fecha: %d / %d /%d \n\n", eHojasDeRuta[i].fecha.dia,
+						eHojasDeRuta[i].fecha.mes, eHojasDeRuta[i].fecha.anio);
 			}
-
 		}
 		retorno = 1;
 	}
@@ -178,14 +174,14 @@ int mostrarHojaDeRuta(hojaDeRuta HojaRuta[], int len) {
 *\param: Variable de tipo hojaDeRuta.
 *\return: VOID
 **/
-void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta){
+void mostrarUnaHojaDeRUTA(hojaDeRuta eHojasDeRuta){
 
-		printf("\nID Hoja de ruta: %d\n", HojaRuta.idHoja);
-		printf("ID transporte: %d\n", HojaRuta.transporteId);
-		printf("Kilometros: %.2fKM\n", HojaRuta.kmsTotales);
-		printf("Precio de viaje: $%.2f\n", HojaRuta.precioViaje);
-		printf("fecha: %d / %d /%d \n", HojaRuta.fecha.dia, HojaRuta.fecha.mes,
-				HojaRuta.fecha.anio);
+		printf("\nID Hoja de ruta: %d\n", eHojasDeRuta.idHoja);
+		printf("ID transporte: %d\n", eHojasDeRuta.transporteId);
+		printf("Kilometros: %.2fKM\n", eHojasDeRuta.kmsTotales);
+		printf("Precio de viaje: $%.2f\n", eHojasDeRuta.precioViaje);
+		printf("fecha: %d / %d /%d \n", eHojasDeRuta.fecha.dia, eHojasDeRuta.fecha.mes,
+				eHojasDeRuta.fecha.anio);
 }
 
 /**
@@ -193,14 +189,14 @@ void mostrarUnaHojaDeRUTA(hojaDeRuta HojaRuta){
 *\param: Array de tipo hojaDeRuta, Longitud del array.
 *\return: Retorna 1 si encuentra espacio, Retorna 0 si no lo encuentra.
 **/
-int buscarEspacioHojaDeRuta(hojaDeRuta hojaRuta[], int len){
+int buscarEspacioHojaDeRuta(hojaDeRuta eHojasDeRuta[], int longitudHojasDeRuta){
 
 	int retorno = 0;
 
-	if(hojaRuta != NULL && len > 0){
-		for(int i = 0; i < len-1; i++){
+	if(eHojasDeRuta != NULL && longitudHojasDeRuta > 0){
+		for(int i = 0; i < longitudHojasDeRuta; i++){
 
-			if(hojaRuta[i].isEmpty == 0){
+			if(eHojasDeRuta[i].isEmpty == 0){
 
 				retorno = 1;
 				break;

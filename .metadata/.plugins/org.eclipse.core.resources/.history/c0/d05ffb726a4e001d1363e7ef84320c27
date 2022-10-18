@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include "Confederaciones.h"
+
+int iniciarConfederacion(eConfederacion arrayConfederaciones[]){
+
+	int retorno = 0;
+
+	if(arrayConfederaciones != NULL){
+
+		arrayConfederaciones[0].id = 100;
+		strncpy(eTipos[0].descripcion,"Camion Recto", 30);
+
+		arrayConfederaciones[1].id = 101;
+		strncpy(eTipos[1].descripcion,"Camion Remolque", 30);
+
+		arrayConfederaciones[2].id = 102;
+		strncpy(eTipos[2].descripcion,"Camion Semirremolque", 30);
+
+		arrayConfederaciones[3].id = 103;
+		strncpy(eTipos[3].descripcion,"Camion Elevador", 30);
+
+		arrayConfederaciones[3].id = 104;
+		strncpy(eTipos[3].descripcion,"Camion Elevador", 30);
+
+		arrayConfederaciones[3].id = 105;
+		strncpy(eTipos[3].descripcion,"Camion Elevador", 30);
+
+		retorno = 1;
+	}
+	return retorno;
+}
+	int id;
+	char nombre[50];
+	char region[50];
+	int anioCreacion;
