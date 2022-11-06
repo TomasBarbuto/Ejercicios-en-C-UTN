@@ -3,6 +3,7 @@
 #include "LinkedList.h"
 #include "Jugador.h"
 #include "Seleccion.h"
+#include "Controller.h"
 
 /** \brief Parsea los datos de los jugadores desde el archivo jugadores.csv (modo texto).
  *
@@ -19,7 +20,7 @@ int parser_JugadorFromText(FILE* pFile, LinkedList* pArrayListJugador){
 	char auxPosicion[100];
 	char auxNacionalidad[100];
 	char auxIdSeleccion[100];
-	Jugador* NuevoJugador;
+	Jugador* pAuxJugador = NULL;
 	int retornoVariable;
 
 	if(pFile != NULL && pArrayListJugador != NULL){
@@ -35,13 +36,15 @@ int parser_JugadorFromText(FILE* pFile, LinkedList* pArrayListJugador){
 
 			if(retornoVariable == 6){
 
-				NuevoJugador = jug_newParametros(auxId, auxNombreCompleto, auxEdad, auxPosicion,
+				pAuxJugador = jug_newParametros(auxId, auxNombreCompleto, auxEdad, auxPosicion,
 														auxNacionalidad, auxIdSeleccion);
-				if(NuevoJugador != NULL){
+				if(pAuxJugador != NULL){
 
-				   ll_add(pArrayListJugador, NuevoJugador);
+				  if(ll_add(pArrayListJugador, pAuxJugador) == 0){
+
+					  retorno = 1;
+				  }
 				}
-				retorno = 1;
 
 			}else{
 
@@ -71,25 +74,26 @@ int parser_JugadorFromBinary(FILE* pFile, LinkedList* pArrayListJugador){
 	char axuPosicion[30];
 	char auxNacionalidad[30];
 	int auxIdSeleccion;
-	Jugador* NuevoJugador;
+	Jugador* pAuxJugador = NULL;
 	int retornoVariable;
 
 	if(pFile != NULL && pArrayListJugador != NULL){
 
 		do{
 
-			retornoVariable = fread(&NuevoJugador, sizeof(Jugador), 1, pFile);
+			retornoVariable = fread(pAuxJugador, sizeof(Jugador), 1, pFile);
 
 			if(retornoVariable == 1){
 
-				if(jug_getId(NuevoJugador, &axuId)
-				&& jug_getNombreCompleto(NuevoJugador, auxNombreCompleto)
-				&& jug_getEdad(NuevoJugador, &auxEdad)
-				&& jug_getPosicion(NuevoJugador, axuPosicion)
-				&& jug_getNacionalidad(NuevoJugador, auxNacionalidad)
-				&& jug_getIdSeleccion(NuevoJugador, &auxIdSeleccion)){
+				if(jug_getId(pAuxJugador, &axuId)
+				&& jug_getNombreCompleto(pAuxJugador, auxNombreCompleto)
+				&& jug_getEdad(pAuxJugador, &auxEdad)
+				&& jug_getPosicion(pAuxJugador, axuPosicion)
+				&& jug_getNacionalidad(pAuxJugador, auxNacionalidad)
+				&& jug_getIdSeleccion(pAuxJugador, &auxIdSeleccion)){
 
 					//ACA LLAMO A LA FUNCION DONDE VA A PASAR ALGO...
+					controller_cargarJugadoresDesdeBinario("Jugadores.bin", pArrayListJugador);
 
 				}
 
@@ -122,31 +126,37 @@ int parser_SeleccionFromText(FILE* pFile , LinkedList* pArrayListSeleccion){
 	char auxPais[100];
 	char auxConfederacion[100];
 	char auxConvocados[100];
-	Seleccion* pListaSeleccion;
+	Seleccion* pAuxSeleccion;
 	int retornoVariable;
 
 	if(pFile != NULL && pArrayListSeleccion != NULL){
 
 		//fscanf lee el archivo.
 		fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", auxId, auxPais, auxConfederacion, auxConvocados); //LECTURA FANTASMA
-
+		printf("entre a pfile!=null\n");
 		do{
 
 			retornoVariable = fscanf(pFile, "%[^,],%[^,],%[^,],%[^\n]\n", auxId, auxPais, auxConfederacion,
 									 auxConvocados);
 
 			if(retornoVariable == 4){
+				printf("retorno var = 4\n");
 
-				pListaSeleccion = selec_newParametros(auxId, auxPais, auxConfederacion, auxConvocados);
+				pAuxSeleccion = selec_newParametros(auxId, auxPais, auxConfederacion, auxConvocados);
 
-				if(pListaSeleccion != NULL){
+				if(pAuxSeleccion != NULL){
 
-				   //ACA LLAMO A LA FUNCION QUE ASIGNA MI PUNTERO EMPLEADO, AL ARRAY DE PUNTEROS EMPLEADOS.
+
+				   if(ll_add(pArrayListSeleccion, pAuxSeleccion) == 0){
+
+					   printf("ll_add\n");
+				   }
+
 				}
 				retorno = 1;
 
 			}else{
-
+				printf("No lei 4 variables\n");
 				retorno = 0;
 				break; //si no leyo 4 variables break. se rompe
 			}

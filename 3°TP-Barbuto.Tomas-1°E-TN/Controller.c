@@ -4,6 +4,7 @@
 #include "Seleccion.h"
 #include "LinkedList.h"
 #include "Parser.h"
+#include "Validaciones.h"
 
 
 /** \brief Carga los datos de los jugadores desde el archivo jugadores.csv (modo texto).
@@ -16,20 +17,22 @@
 int controller_cargarJugadoresDesdeTexto(char* path, LinkedList* pArrayListJugador){
 
 	int retorno;
-	FILE* pArchivo;
+	FILE* pArchivo = NULL;
 
 	if(path != NULL && pArrayListJugador != NULL){
 
 		pArchivo = fopen(path,"r");
 
-		if(pArchivo!=NULL){
+		if(pArchivo != NULL){
+			printf("entre a p!=NULL\n");
 
 			if(parser_JugadorFromText(pArchivo, pArrayListJugador)){
 
+				printf("anduvo el parser\n");
 				retorno = 1;
 
 			}else{
-
+				printf("No anduvo el parser\n");
 				retorno = 0;
 			}
 		}
@@ -48,7 +51,7 @@ int controller_cargarJugadoresDesdeTexto(char* path, LinkedList* pArrayListJugad
 int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* pArrayListJugador){
 
 	int retorno;
-	FILE* pArchivo;
+	FILE* pArchivo = NULL;
 
 	if(path != NULL && pArrayListJugador != NULL){
 
@@ -79,8 +82,47 @@ int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* pArrayListJu
 */
 int controller_agregarJugador(LinkedList* pArrayListJugador){
 
-    return 1;
+	    Jugador* NuevoJugador;
+		int retorno = 0;
+		int auxId;
+		char auxNombreCompleto[100];
+		int auxEdad;
+		char auxPosicion[30];
+		char auxNacionalidad[30];
+		int auxIdSeleccion = 0;
+
+		if(getString(auxNombreCompleto,"\nIngrese Nombre: ", "\nError reingrese: ", 100) &&
+		   getNumber(&auxEdad, "\nIngrese Edad: ", "\nError reingrese: ", 16, 45) &&
+		   getString(auxNacionalidad,"\nIngrese Nacionalidad: ", "\nError reingrese: ", 30) &&
+	       getString(auxPosicion,"\nIngrese Posicion: ", "\nError reingrese: ", 30)){
+
+			 auxId = idAutoincremental();
+
+			 NuevoJugador = jug_new();
+
+			 if(NuevoJugador != NULL){
+
+				if(jug_setId(NuevoJugador, auxId)
+				&& jug_setNombreCompleto(NuevoJugador, auxNombreCompleto)
+				&& jug_setEdad(NuevoJugador, auxEdad)
+				&& jug_setPosicion(NuevoJugador, auxPosicion)
+				&& jug_setNacionalidad(NuevoJugador, auxNacionalidad)
+				&& jug_setIdSeleccion(NuevoJugador, auxIdSeleccion)){
+
+
+					if(ll_add(pArrayListJugador, NuevoJugador) == 0){
+
+						retorno = 1;
+					}
+				}
+			 }else{
+
+				 jug_delete(NuevoJugador);
+			 }
+		}
+		return retorno;
 }
+
 
 /** \brief Modificar datos del jugador
 *
@@ -113,9 +155,30 @@ int controller_removerJugador(LinkedList* pArrayListJugador)
 * \return int
 *
 */
-int controller_listarJugadores(LinkedList* pArrayListJugador)
-{
-    return 1;
+int controller_listarJugadores(LinkedList* pArrayListJugador){
+
+	int retorno = 0;
+	Jugador* Jugadores = NULL;
+
+	if(pArrayListJugador != NULL){
+
+		for(int i = 0; i < ll_len(pArrayListJugador); i++){
+
+			Jugadores = ll_get(pArrayListJugador, i);
+
+			if(Jugadores != NULL){
+
+				if(!imprimirJugador(pArrayListJugador, i)){
+
+					retorno = 0;
+					break;
+				}
+				retorno = 1;
+			}
+		}
+	}
+
+	return retorno;
 }
 
 /** \brief Ordenar jugadores
@@ -143,7 +206,6 @@ int controller_guardarJugadoresModoTexto(char* path, LinkedList* pArrayListJugad
 	FILE* pArchivo;
 	int longitud; //longitud de linkedList
 	Jugador *auxJugador;
-
 	//Campos de struct Jugador.
 	int auxId;
 	char auxNombreCompleto[100];
@@ -159,21 +221,24 @@ int controller_guardarJugadoresModoTexto(char* path, LinkedList* pArrayListJugad
 		if(pArchivo != NULL){
 
 			longitud = ll_len(pArrayListJugador);
-
+			fprintf(pArchivo, "id,nombreCompleto,edad,posicion,nacionalidad,idSelecion\n");
 			for(int i = 0; i < longitud ; i++){
 
 				auxJugador = ll_get(pArrayListJugador, i);
 
-				if(jug_getId(auxJugador, &auxId)
-				&& jug_getNombreCompleto(auxJugador, auxNombreCompleto)
-				&& jug_getEdad(auxJugador, &auxEdad)
-				&& jug_getPosicion(auxJugador, auxPosicion)
-				&& jug_getNacionalidad(auxJugador, auxNacionalidad)
-				&& jug_getIdSeleccion(auxJugador, &auxIdSeleccion)){
+				if(auxJugador != NULL){
 
-					//retorna numero de bytes escritos.
-					fprintf(pArchivo, "%d,%s,%d,%s,%s,%d\n" , auxId, auxNombreCompleto, auxEdad, auxPosicion,
-							auxNacionalidad, auxIdSeleccion);//Escribe el archivo.
+					if(jug_getId(auxJugador, &auxId)
+					&& jug_getNombreCompleto(auxJugador, auxNombreCompleto)
+					&& jug_getEdad(auxJugador, &auxEdad)
+					&& jug_getPosicion(auxJugador, auxPosicion)
+					&& jug_getNacionalidad(auxJugador, auxNacionalidad)
+					&& jug_getIdSeleccion(auxJugador, &auxIdSeleccion)){
+
+						//retorna numero de bytes escritos.
+						fprintf(pArchivo, "%d,%s,%d,%s,%s,%d\n" , auxId, auxNombreCompleto, auxEdad, auxPosicion,
+								auxNacionalidad, auxIdSeleccion);//Escribe el archivo.
+					}
 				}
 			}
 
@@ -201,7 +266,7 @@ int controller_guardarJugadoresModoBinario(char* path , LinkedList* pArrayListJu
 
 	if(path != NULL && pArrayListJugador != NULL){
 
-		pArchivo = fopen(path,"wb");
+		pArchivo = fopen(path, "wb");
 
 		if(pArchivo != NULL){
 
@@ -251,13 +316,13 @@ int controller_cargarSeleccionesDesdeTexto(char* path , LinkedList* pArrayListSe
 		pArchivo = fopen(path,"r");
 
 		if(pArchivo != NULL){
-
+			printf("entre a p!=Null\n");
 			if(parser_SeleccionFromText(pArchivo, pArrayListSeleccion)){
-
+				printf("anduvo el parser\n");
 				retorno = 1;
 
 			}else{
-
+				printf("No anduvo el parser\n");
 				retorno = 0;
 			}
 		}
@@ -287,9 +352,31 @@ int controller_editarSeleccion(LinkedList* pArrayListSeleccion)
 * \return int
 *
 */
-int controller_listarSelecciones(LinkedList* pArrayListSeleccion)
-{
-    return 1;
+int controller_listarSelecciones(LinkedList* pArrayListSeleccion){
+
+	int retorno = 0;
+	Seleccion* selecciones = NULL;
+
+	if(pArrayListSeleccion != NULL){
+
+		for(int i = 0; i < ll_len(pArrayListSeleccion); i++){
+
+			selecciones = (Seleccion*) ll_get(pArrayListSeleccion, i);
+
+
+			if(selecciones != NULL){
+
+				if(!imprimirSeleccion(pArrayListSeleccion, i)){
+
+					retorno = 0;
+					break;
+				}
+				retorno = 1;
+			}
+		}
+	}
+
+	return retorno;
 }
 
 /** \brief Ordenar selecciones
@@ -317,7 +404,6 @@ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSe
 	FILE* pArchivo;
 	int longitud; //longitud de linkedList
 	Seleccion *auxSelecion;
-
 	//Campos de struct Jugador.
 	int auxId;
 	char auxPais[30];
@@ -331,18 +417,22 @@ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSe
 		if(pArchivo != NULL){
 
 			longitud = ll_len(pArrayListSeleccion);
+			fprintf(pArchivo,"id,pais,confederacion,convocados\n");
 
 			for(int i = 0; i < longitud ; i++){
 
 				auxSelecion = ll_get(pArrayListSeleccion, i);
 
-				if(selec_getId(auxSelecion, &auxId)
-				&& selec_getPais(auxSelecion, auxPais)
-				&& selec_getConfederacion(auxSelecion, auxConfederacion)
-				&& selec_getConvocados(auxSelecion, &auxConvocados)){
+				if(auxSelecion != NULL){
 
-					//retorna numero de bytes escritos.
-					fprintf(pArchivo, "%d,%s,%s,%d,\n" , auxId, auxPais, auxConfederacion, auxConvocados);//Escribe el archivo.
+					if(selec_getId(auxSelecion, &auxId)
+					&& selec_getPais(auxSelecion, auxPais)
+					&& selec_getConfederacion(auxSelecion, auxConfederacion)
+					&& selec_getConvocados(auxSelecion, &auxConvocados)){
+
+						//retorna numero de bytes escritos.
+						fprintf(pArchivo, "%d,%s,%s,%d,\n" , auxId, auxPais, auxConfederacion, auxConvocados);//Escribe el archivo.
+					}
 				}
 			}
 

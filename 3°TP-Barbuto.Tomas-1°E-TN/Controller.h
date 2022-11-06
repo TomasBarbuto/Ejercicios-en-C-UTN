@@ -1,3 +1,4 @@
+
 int controller_cargarJugadoresDesdeTexto(char* path , LinkedList* pArrayListJugador);
 int controller_cargarJugadoresDesdeBinario(char* path , LinkedList* pArrayListJugador);
 int controller_agregarJugador(LinkedList* pArrayListJugador);

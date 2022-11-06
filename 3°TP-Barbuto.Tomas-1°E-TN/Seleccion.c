@@ -11,13 +11,13 @@
 Seleccion* selec_new(){
 
 	Seleccion *nuevaSeleccion = NULL;
-	nuevaSeleccion = (Seleccion *) malloc(sizeof(Seleccion));
+	nuevaSeleccion = (Seleccion*) malloc(sizeof(Seleccion));
 
 	if (nuevaSeleccion != NULL){
 
-		selec_setId(nuevaSeleccion, 0);
-		selec_setPais(nuevaSeleccion, " ");
-		selec_setConfederacion(nuevaSeleccion, " ");
+		nuevaSeleccion->id = 0;
+		strncpy(nuevaSeleccion->pais, " ", 30);
+		strncpy(nuevaSeleccion->confederacion, " ", 30);
 		selec_setConvocados(nuevaSeleccion, 0);
 
 	}
@@ -29,17 +29,22 @@ Seleccion* selec_new(){
 
 Seleccion* selec_newParametros(char* idStr, char* paisStr, char* confederacionStr, char* convocadosStr){
 
-	Seleccion *nuevaSeleccion = selec_new();
+	Seleccion* nuevaSeleccion = selec_new();
 
 	if(nuevaSeleccion != NULL){
 
-		if (!(selec_setId(nuevaSeleccion, atoi(idStr))
-			&& selec_setPais(nuevaSeleccion, paisStr)
-			&& selec_setConfederacion(nuevaSeleccion, confederacionStr)
-			&& selec_setConvocados(nuevaSeleccion, atoi(convocadosStr)))){
+		if (!(selec_setConvocados(nuevaSeleccion, atoi(convocadosStr)))){
 
 			selec_delete(nuevaSeleccion);
 			nuevaSeleccion = NULL;	//INDICA FUNCION NO ANDUVO BIEN.
+
+		}else{
+
+			nuevaSeleccion->id = atoi(idStr);
+			strncpy(nuevaSeleccion->pais, paisStr, 30);
+			strncpy(nuevaSeleccion->confederacion, confederacionStr, 30);
+
+
 		}
 	}
 
@@ -52,20 +57,6 @@ void selec_delete(Seleccion *this){
 	free(this);
 }
 
-
-///OK
-int selec_setId(Seleccion* this, int id){
-
-	int retorno = 0;
-
-	if(this != NULL && id > 0){
-
-		this->id = id;
-		retorno = 1;
-	}
-
-	return retorno;
-}
 
 ///OK
 int selec_getId(Seleccion* this, int* id){
@@ -82,19 +73,6 @@ int selec_getId(Seleccion* this, int* id){
 	return retorno;
 }
 
-///OK
-int selec_setPais(Seleccion* this, char* pais){
-
-	int retorno = 0;
-
-	if(this != NULL && pais != NULL){
-
-		strncpy(this->pais, pais, 30);
-		retorno = 1;
-	}
-
-	return retorno;
-}
 
 ///OK
 int selec_getPais(Seleccion* this, char* pais){
@@ -110,21 +88,6 @@ int selec_getPais(Seleccion* this, char* pais){
 
 	return retorno;
 }
-
-///OK
-int selec_setConfederacion(Seleccion* this, char* confederacion){
-
-	int retorno = 0;
-
-	if(this != NULL && confederacion != NULL){
-
-		strncpy(this->confederacion, confederacion, 30);
-		retorno = 1;
-	}
-
-	return retorno;
-}
-
 
 ///OK
 int selec_getConfederacion(Seleccion* this, char* confederacion){
@@ -146,7 +109,7 @@ int selec_setConvocados(Seleccion* this, int convocados){
 
 	int retorno = 0;
 
-	if(this != NULL && convocados > 0 && convocados <= 22){
+	if(this != NULL && convocados >= 0 && convocados <= 22){
 
 		this->convocados = convocados;
 		retorno = 1;
@@ -171,6 +134,31 @@ int selec_getConvocados(Seleccion* this, int* convocados){
 	return retorno;
 }
 
+int imprimirSeleccion(LinkedList* pArrayListaSelecciones, int index){
 
+	int retorno = 0;
+	int auxId;
+	char auxPais[30];
+	char auxConfederacion[30];
+	int auxConvocados;
+
+	Seleccion* unaSeleccion = NULL;
+
+	if(pArrayListaSelecciones != NULL && index >= 0 && index < ll_len(pArrayListaSelecciones)){
+
+		unaSeleccion = ll_get(pArrayListaSelecciones, index);
+
+		if(selec_getId(unaSeleccion, &auxId)
+		&& selec_getConvocados(unaSeleccion, &auxConvocados)
+		&& selec_getConfederacion(unaSeleccion, auxConfederacion)
+		&& selec_getPais(unaSeleccion, auxPais)){
+
+			printf("|%10d | %25s | %10d | %20s |\n", auxId, auxConfederacion, auxConvocados, auxPais);
+			retorno = 1;
+		}
+	}
+
+	return retorno;
+}
 
 

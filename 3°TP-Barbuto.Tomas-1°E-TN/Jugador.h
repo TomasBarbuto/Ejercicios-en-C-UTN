@@ -17,7 +17,7 @@ typedef struct{
 Jugador* jug_new();
 Jugador* jug_newParametros(char* idStr,char* nombreCompletoStr,char* edadStr, char* posicionStr, char* nacionalidadStr, char* idSelccionStr);
 
-void jug_delete();
+void jug_delete(Jugador *this);
 
 int jug_setId(Jugador* this, int id);
 int jug_getId(Jugador* this, int* id);
@@ -36,5 +36,8 @@ int jug_getEdad(Jugador* this, int* edad);
 
 int jug_setIdSeleccion(Jugador* this, int idSeleccion);
 int jug_getIdSeleccion(Jugador* this, int* idSeleccion);
+
+int idAutoincremental();
+int imprimirJugador(LinkedList* pArrayListaJugadores, int index);
 
 #endif // jug_H_INCLUDED

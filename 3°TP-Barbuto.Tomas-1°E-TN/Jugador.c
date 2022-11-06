@@ -26,7 +26,6 @@ Jugador* jug_new(){
 
 
 
-
 Jugador* jug_newParametros(char* idStr, char* nombreCompletoStr, char* edadStr, char* posicionStr,
 						   char* nacionalidadStr, char* idSelccionStr){
 
@@ -34,9 +33,9 @@ Jugador* jug_newParametros(char* idStr, char* nombreCompletoStr, char* edadStr, 
 
 	if(nuevoJugador != NULL){
 
-	      if (!(jug_setId (nuevoJugador, atoi(idStr))
-		    && jug_setNombreCompleto(nuevoJugador, nombreCompletoStr)
-		    && jug_setEdad(nuevoJugador, atoi(edadStr))
+		if (!(jug_setId (nuevoJugador, atoi(idStr))
+			&& jug_setNombreCompleto(nuevoJugador, nombreCompletoStr)
+			&& jug_setEdad(nuevoJugador, atoi(edadStr))
 			&& jug_setPosicion(nuevoJugador, posicionStr)
 			&& jug_setNacionalidad(nuevoJugador, nacionalidadStr)
 			&& jug_setIdSeleccion(nuevoJugador, atoi(idSelccionStr)))){
@@ -49,7 +48,7 @@ Jugador* jug_newParametros(char* idStr, char* nombreCompletoStr, char* edadStr, 
 	  return nuevoJugador;
 }
 
-///REVISAR
+
 void jug_delete(Jugador *this){
 
 	free(this);
@@ -209,7 +208,7 @@ int jug_setIdSeleccion(Jugador* this, int idSeleccion){
 
 	int retorno = 0;
 
-	if(this != NULL && idSeleccion > 0){
+	if(this != NULL && idSeleccion >= 0){
 
 		this->idSeleccion = idSeleccion;
 		retorno = 1;
@@ -232,3 +231,83 @@ int jug_getIdSeleccion(Jugador* this, int* idSeleccion){
 
 	return retorno;
 }
+
+int idAutoincremental(){ // Atomizar esta funcion.
+
+	int static idJugador;
+	char auxId[1000];
+	FILE* pArchivo = NULL;
+	int retornoFscanf;
+	int retornoFprintF;
+
+
+	pArchivo = fopen("ID.csv", "r");
+
+	if(pArchivo != NULL){
+
+		retornoFscanf = fscanf(pArchivo, "%[^\n]\n", auxId);
+
+		if(retornoFscanf == 1){
+
+			printf("Se otorgo Su ID Correctamente\n");
+		}else{
+
+			printf("ERROR\n");
+		}
+	}
+	fclose(pArchivo);
+
+	pArchivo = fopen("ID.csv", "w");
+
+	if (pArchivo != NULL){
+
+		idJugador = atoi(auxId);
+		idJugador++;
+
+		retornoFprintF = fprintf(pArchivo, "%d\n", idJugador);
+
+		printf("RETORNO %d\n", retornoFprintF);
+
+	}
+	fclose(pArchivo);
+	printf("'%d'", idJugador);
+
+	return idJugador;
+}
+
+///OK
+int imprimirJugador(LinkedList* pArrayListaJugadores, int index){
+
+	int retorno = 0;
+	int auxId;
+	char auxNombreCompleto[100];
+	int auxEdad;
+	char auxPosicion[30];
+	char auxNacionalidad[30];
+	Jugador* unJugador = NULL;
+
+	if(pArrayListaJugadores != NULL && index >= 0 && index < ll_len(pArrayListaJugadores)){
+
+		unJugador = ll_get(pArrayListaJugadores, index);
+
+		if(jug_getId(unJugador, &auxId)
+		&& jug_getNombreCompleto(unJugador, auxNombreCompleto)
+		&& jug_getEdad(unJugador, &auxEdad)
+		&& jug_getPosicion(unJugador, auxPosicion)
+		&& jug_getNacionalidad(unJugador, auxNacionalidad)){
+
+
+			printf("|%10d | %25s | %10d | %20s | %10s  |\n", auxId, auxNombreCompleto, auxEdad,
+														auxPosicion,auxNacionalidad);
+			retorno = 1;
+		}
+	}
+
+	return retorno;
+}
+
+
+
+
+
+
