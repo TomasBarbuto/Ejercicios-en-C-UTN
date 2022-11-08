@@ -46,9 +46,24 @@ int main(){
     			break;
 
     		case 3:
+    			if(controller_editarJugador(listaJugadores)){
+
+    				printf("Se modifico un jugador\n\n");
+    			}else{
+
+    				printf("No ingreso un ID existente\nSera redirigido al menu principal\n\n");
+    			}
+    			system("pause");
     			break;
 
     		case 4:
+    			if(controller_removerJugador(listaJugadores)){
+
+    				printf("Se elimino un jugador\n");
+    			}else{
+
+    				printf("no elimine nada amigo\n");
+    			}
     			break;
 
     		case 5:
@@ -56,17 +71,18 @@ int main(){
 
     				printf("Anduve Mal\n");
     			}
-    			break;
-
-    		case 6:
     			if(!controller_listarSelecciones(listaSelecciones)){
 
 				printf("Anduve Mal\n");
     			}
+    			break;
 
+    		case 6:
+    			controller_ConvocarJugadores(listaSelecciones, listaJugadores);
     			break;
 
     		case 7:
+
     			break;
 
     		case 8:

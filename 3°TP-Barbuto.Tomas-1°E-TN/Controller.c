@@ -5,6 +5,8 @@
 #include "LinkedList.h"
 #include "Parser.h"
 #include "Validaciones.h"
+#include "Menu.h"
+#include "Controller.h"
 
 
 /** \brief Carga los datos de los jugadores desde el archivo jugadores.csv (modo texto).
@@ -131,9 +133,105 @@ int controller_agregarJugador(LinkedList* pArrayListJugador){
 * \return int
 *
 */
-int controller_editarJugador(LinkedList* pArrayListJugador)
-{
-    return 1;
+int controller_editarJugador(LinkedList* pArrayListJugador){
+
+	int retorno = 0;
+	int idBuscar;
+	int indice;
+	int opcion;
+	char nuevoNombre[100];
+	char nuevaPosicion[30];
+	char nuevaNacionalidad[30];
+	int nuevaEdad;
+	Jugador* auxJugador = NULL;
+
+	if(pArrayListJugador != NULL){
+
+		if(controller_listarJugadores(pArrayListJugador)){
+
+			if(getNumber(&idBuscar, "\nSeleccione el ID: ", "\nError Reingrese el ID: ", 1, 3000)){
+
+				indice = validarExistenciaDeJugador(pArrayListJugador, idBuscar);
+
+				if(indice != -1){
+
+					auxJugador = ll_get(pArrayListJugador, indice);
+
+					if(auxJugador != NULL){
+
+						do{
+							printf("|%10s | %25s | %10s | %20s | %10s  |\n", "ID", "NOMBRE JUGADOR", "EDAD",
+																				   "POSICION", "NACIONALIDAD");
+
+							imprimirJugador(pArrayListJugador, indice);
+							menuModificar();
+							if(!getNumber(&opcion,"\nOpcion: ", "\nOpcion no valida\nReingrese: ", 1, 5)){
+
+								printf("Error\nSera Redirigido al menu principal\n");
+							}
+							switch(opcion){
+
+							case 1:
+								if(!getString(nuevoNombre, "\nIngrese el nuevo nombre: ",
+										"\nSupero la cantidad de caracteres maximos\nReingrese: ", 100)){
+
+									printf("ERROR\n");
+								}
+								if(!jug_setNombreCompleto(auxJugador, nuevoNombre)){
+
+									printf("ERROR\n");
+								}
+								break;
+
+							case 2:
+								if(!getNumber(&nuevaEdad, "\nIngrese la nueva edad: ",
+										"\nSu edad debe ser mayor a 16 y menor a 40", 16, 40)){
+
+									printf("ERROR\n");
+								}
+								if(!jug_setEdad(auxJugador, nuevaEdad)){
+
+									printf("ERROR\n");
+								}
+								break;
+							case 3:
+								if(!getString(nuevaPosicion, "\nIngrese nueva posicion: ",
+										"\nSupero la cantidad de caracteres maximos\nReingrese: ", 30)){
+
+									printf("ERROR\n");
+								}
+								if(!jug_setPosicion(auxJugador, nuevaPosicion)){
+
+									printf("ERROR\n");
+								}
+								break;
+							case 4:
+								if(!getString(nuevaNacionalidad, "\nIngrese nueva Nacionalidad: ",
+										"\nSupero la cantidad de caracteres maximos\nReingrese: ", 30)){
+
+									printf("ERROR\n");
+								}
+								if(!jug_setNacionalidad(auxJugador, nuevaNacionalidad)){
+
+									printf("ERROR\n");
+								}
+								break;
+
+							case 5:
+								printf("Salio del menu modificar\n");
+								break;
+							}
+
+						}while(opcion != 5);
+
+						retorno = 1;
+					}
+				}
+			}
+		}
+	}
+
+    return retorno;
 }
 
 /** \brief Baja del jugador
@@ -143,9 +241,42 @@ int controller_editarJugador(LinkedList* pArrayListJugador)
 * \return int
 *
 */
-int controller_removerJugador(LinkedList* pArrayListJugador)
-{
-    return 1;
+//Mandar un do while mas lindo.
+int controller_removerJugador(LinkedList* pArrayListJugador){
+
+	int retorno = 0;
+	int indice;
+	int idBuscar;
+	int confirmar;
+	Jugador* auxJugador = NULL;
+
+	if(pArrayListJugador != NULL){
+
+		if(controller_listarJugadores(pArrayListJugador)){
+
+			if(getNumber(&idBuscar, "\nSeleccione el ID: ", "\nError Reingrese el ID: ", 1, 3000)){
+
+				indice = validarExistenciaDeJugador(pArrayListJugador, idBuscar);
+
+				if(indice != -1){
+
+					if(imprimirJugador(pArrayListJugador, indice)&&
+							getNumber(&confirmar, "Ingrese 1 para BORRAR o 0 para volver al menu principal\n",
+									"\nOpcion no Valida\nReingrese: ", 0, 1)){
+
+						if(confirmar == 1){
+
+							if(ll_remove(pArrayListJugador, indice)==0){
+
+								retorno = 1;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	return retorno;
 }
 
 /** \brief Listar jugadores
@@ -161,6 +292,9 @@ int controller_listarJugadores(LinkedList* pArrayListJugador){
 	Jugador* Jugadores = NULL;
 
 	if(pArrayListJugador != NULL){
+
+		printf("|%10s | %25s | %10s | %20s | %10s  |\n", "ID", "NOMBRE JUGADOR", "EDAD",
+																"POSICION", "NACIONALIDAD");
 
 		for(int i = 0; i < ll_len(pArrayListJugador); i++){
 
@@ -359,10 +493,10 @@ int controller_listarSelecciones(LinkedList* pArrayListSeleccion){
 
 	if(pArrayListSeleccion != NULL){
 
+		printf("|%10s | %25s | %10s | %20s |\n", "ID", "CONFEDERACION", "CONVOCADOS", "PAIS");
 		for(int i = 0; i < ll_len(pArrayListSeleccion); i++){
 
 			selecciones = (Seleccion*) ll_get(pArrayListSeleccion, i);
-
 
 			if(selecciones != NULL){
 
@@ -442,5 +576,85 @@ int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSe
 	}
 	return retorno;
 }
+
+//A) CONVOCAR: siempre y cuando el jugador no esté convocado en otra selección y la
+//selección a donde será convocado no haya llegado a la cantidad máxima de
+//convocados, se deberá asociar al jugador el id de la selección y en dicha selección
+//se deberá aumentar el contador de convocados en 1. Al momento de tener que
+//elegir qué dato ingresar se deberá mostrar un listado con las opciones disponibles.
+
+int controller_ConvocarJugadores(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador){
+
+	int retorno = -1;
+	int idSeleccion;
+	int buscarId;
+	int indice;
+	int indiceSeleccion;
+	int convocados = 0;
+	Jugador* auxJugador = NULL;
+	Seleccion* auxSeleccion = NULL;
+
+	if(pArrayListSeleccion != NULL && pArrayListJugador != NULL){
+
+		for(int i = 0; i < ll_len(pArrayListJugador); i++){
+
+			auxJugador = ll_get(pArrayListJugador, i);
+
+			jug_getIdSeleccion(auxJugador, &idSeleccion);
+
+			if(idSeleccion == 0){
+
+				imprimirJugador(pArrayListJugador, i);
+			}
+		}
+
+		if(getNumber(&buscarId, "\nSeleccione el Jugador a convocar por su ID\n",
+				"\nError Reingrese el ID: ", 1, 3000)){
+
+			indice = validarExistenciaDeJugador(pArrayListJugador, buscarId);
+
+			if(indice != -1){
+
+				auxJugador = ll_get(pArrayListJugador, indice);
+				printf("%d",auxJugador->idSeleccion);
+				controller_listarSelecciones(pArrayListSeleccion);
+				//------------------------------------------------------//
+
+					if(getNumber(&idSeleccion, "\nIngrese a que seleccion sera convocado: ",
+								"\nNo existe una seleccion con ese ID\nReingrese: ", 1, 32)){
+
+						printf("pase el getNumber\n");
+
+						indiceSeleccion = validarExistenciaDeSeleccion(pArrayListSeleccion, idSeleccion);
+
+						auxSeleccion = ll_get(pArrayListSeleccion, indiceSeleccion);
+
+						if(selec_getConvocados(auxSeleccion, &convocados)){
+
+							printf("anduve bien el get convocados\n");
+						}
+
+						//auxSeleccion = ll_get(pArrayListSeleccion, idSeleccion);
+
+						if(convocados < 22){
+
+							jug_setIdSeleccion(auxJugador, idSeleccion);
+							convocados++;
+							selec_setConvocados(auxSeleccion, convocados);
+							printf("hice todo\n");
+							retorno = 0;
+						}
+						printf("%d",auxJugador->idSeleccion);
+					}
+				}
+			}
+		}
+
+	return retorno;
+}
+
+
+
+
 
 

@@ -24,6 +24,7 @@ int selec_setConvocados(Seleccion* this, int convocados);
 int selec_getConvocados(Seleccion* this, int* convocados);
 
 int imprimirSeleccion(LinkedList* pArrayListaSelecciones, int index);
+int validarExistenciaDeSeleccion(LinkedList* pArrayListaSelecciones, int idParam);
 
 
 #endif // selec_H_INCLUDED

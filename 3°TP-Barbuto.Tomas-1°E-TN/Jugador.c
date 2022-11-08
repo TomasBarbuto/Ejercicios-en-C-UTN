@@ -25,7 +25,6 @@ Jugador* jug_new(){
 }
 
 
-
 Jugador* jug_newParametros(char* idStr, char* nombreCompletoStr, char* edadStr, char* posicionStr,
 						   char* nacionalidadStr, char* idSelccionStr){
 
@@ -296,7 +295,6 @@ int imprimirJugador(LinkedList* pArrayListaJugadores, int index){
 		&& jug_getPosicion(unJugador, auxPosicion)
 		&& jug_getNacionalidad(unJugador, auxNacionalidad)){
 
-
 			printf("|%10d | %25s | %10d | %20s | %10s  |\n", auxId, auxNombreCompleto, auxEdad,
 														auxPosicion,auxNacionalidad);
 			retorno = 1;
@@ -305,6 +303,35 @@ int imprimirJugador(LinkedList* pArrayListaJugadores, int index){
 
 	return retorno;
 }
+
+int validarExistenciaDeJugador(LinkedList* pArrayJugadores, int idParam){
+
+	int retorno = -1;
+	int idDeJugador;
+	Jugador* unJugador = NULL;
+
+	if(pArrayJugadores != NULL){
+
+		for(int i = 0; i < ll_len(pArrayJugadores); i++){
+
+			unJugador = ll_get(pArrayJugadores, i);
+
+			if(jug_getId(unJugador, &idDeJugador)){
+
+				if(idDeJugador == idParam){
+
+					retorno = ll_indexOf(pArrayJugadores, unJugador);
+					break; //Retorno el index.
+				}
+			}
+		}
+	}
+
+	return retorno;
+}
+
+
+
 
 
 

@@ -19,3 +19,14 @@ void menuPrincipal(){
 		   "10-GUARDAR ARCHIVOS .CSV\n"
 		   "11-SALIR\n");
 }
+
+void menuModificar(){
+
+	printf("Seleccione el campo a modificar\n"
+		   "1-Nombre\n"
+		   "2-Edad\n"
+		   "3-Posicion\n"
+		   "4-Nacionalidad\n"
+		   "5-Salir\n");
+
+}

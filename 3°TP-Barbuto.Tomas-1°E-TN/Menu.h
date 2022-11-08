@@ -9,5 +9,5 @@
 #define MENU_H_
 
 void menuPrincipal();
-
+void menuModificar();
 #endif /* MENU_H_ */

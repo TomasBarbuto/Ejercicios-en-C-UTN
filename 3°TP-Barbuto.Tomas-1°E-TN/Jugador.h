@@ -39,5 +39,6 @@ int jug_getIdSeleccion(Jugador* this, int* idSeleccion);
 
 int idAutoincremental();
 int imprimirJugador(LinkedList* pArrayListaJugadores, int index);
+int validarExistenciaDeJugador(LinkedList* pArrayJugadores, int idParam);
 
 #endif // jug_H_INCLUDED

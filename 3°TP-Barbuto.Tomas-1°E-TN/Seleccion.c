@@ -122,7 +122,6 @@ int selec_setConvocados(Seleccion* this, int convocados){
 ///OK
 int selec_getConvocados(Seleccion* this, int* convocados){
 
-
 	int retorno = 0;
 
 	if(this != NULL && convocados != NULL){
@@ -155,6 +154,32 @@ int imprimirSeleccion(LinkedList* pArrayListaSelecciones, int index){
 
 			printf("|%10d | %25s | %10d | %20s |\n", auxId, auxConfederacion, auxConvocados, auxPais);
 			retorno = 1;
+		}
+	}
+
+	return retorno;
+}
+
+int validarExistenciaDeSeleccion(LinkedList* pArrayListaSelecciones, int idParam){
+
+	int retorno = -1;
+	int idDeSeleccion;
+	Seleccion* unaSeleccion = NULL;
+
+	if(pArrayListaSelecciones != NULL){
+
+		for(int i = 0; i < ll_len(pArrayListaSelecciones); i++){
+
+			unaSeleccion = ll_get(pArrayListaSelecciones, i);
+
+			if(selec_getId(unaSeleccion, &idDeSeleccion)){
+
+				if(idDeSeleccion == idParam){
+
+					retorno = ll_indexOf(pArrayListaSelecciones, unaSeleccion);
+					break; //Retorno el index.
+				}
+			}
 		}
 	}
 
