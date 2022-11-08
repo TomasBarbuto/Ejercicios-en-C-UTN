@@ -10,4 +10,6 @@
 
 void menuPrincipal();
 void menuModificar();
+void menuListados();
+
 #endif /* MENU_H_ */

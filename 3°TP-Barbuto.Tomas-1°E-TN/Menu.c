@@ -30,3 +30,14 @@ void menuModificar(){
 		   "5-Salir\n");
 
 }
+
+void menuListados(){
+
+	printf("Seleccione el Listado\n"
+			   "1-TODOS LOS JUGADORES\n"
+			   "2-TODAS LAS SELECCIONES\n"
+			   "3-JUGADORES CONVOCADOS\n"
+			   "4-SALIR\n");
+
+}
+

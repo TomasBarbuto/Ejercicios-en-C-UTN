@@ -266,6 +266,7 @@ int controller_removerJugador(LinkedList* pArrayListJugador){
 
 						if(confirmar == 1){
 
+							jug_delete(auxJugador);
 							if(ll_remove(pArrayListJugador, indice)==0){
 
 								retorno = 1;
@@ -293,7 +294,7 @@ int controller_listarJugadores(LinkedList* pArrayListJugador){
 
 	if(pArrayListJugador != NULL){
 
-		printf("|%10s | %25s | %10s | %20s | %10s  |\n", "ID", "NOMBRE JUGADOR", "EDAD",
+		printf("|%10s | %25s | %10s | %20s | %10s |\n", "ID", "NOMBRE JUGADOR", "EDAD",
 																"POSICION", "NACIONALIDAD");
 
 		for(int i = 0; i < ll_len(pArrayListJugador); i++){
@@ -616,7 +617,7 @@ int controller_ConvocarJugadores(LinkedList* pArrayListSeleccion, LinkedList* pA
 			if(indice != -1){
 
 				auxJugador = ll_get(pArrayListJugador, indice);
-				printf("%d",auxJugador->idSeleccion);
+				printf("%d", auxJugador->idSeleccion);
 				controller_listarSelecciones(pArrayListSeleccion);
 				//------------------------------------------------------//
 
@@ -636,14 +637,17 @@ int controller_ConvocarJugadores(LinkedList* pArrayListSeleccion, LinkedList* pA
 
 						//auxSeleccion = ll_get(pArrayListSeleccion, idSeleccion);
 
-						if(convocados < 22){
-
 							jug_setIdSeleccion(auxJugador, idSeleccion);
 							convocados++;
-							selec_setConvocados(auxSeleccion, convocados);
-							printf("hice todo\n");
-							retorno = 0;
-						}
+							//Si selec da 0 retorna -1.
+							if(selec_setConvocados(auxSeleccion, convocados)){
+
+								printf("hice todo\n");
+								retorno = 0;
+							}else{
+								retorno = -1;
+							}
+
 						printf("%d",auxJugador->idSeleccion);
 					}
 				}
@@ -661,7 +665,7 @@ int controller_ListarConvocados(LinkedList* pArrayListJugador){
 
 	if(pArrayListJugador != NULL){
 
-		printf("|%10s | %25s | %10s | %20s | %10s  |\n", "ID", "NOMBRE JUGADOR", "EDAD",
+		printf("|%10s | %25s | %10s | %20s | %10s |\n", "ID", "NOMBRE JUGADOR", "EDAD",
 																"POSICION", "NACIONALIDAD");
 
 		for(int i = 0; i < ll_len(pArrayListJugador); i++){
@@ -688,6 +692,60 @@ int controller_ListarConvocados(LinkedList* pArrayListJugador){
 	return retorno;
 }
 
+
+int controller_cargarIdAutoincremental(char* path, char* auxid){
+
+	FILE* pArchivo = NULL;
+	int retornoFscanf;
+	int retorno = 0;
+
+	pArchivo = fopen(path, "r");
+
+	if(path != NULL && auxid != NULL){
+
+		if(pArchivo != NULL){
+
+			retornoFscanf = fscanf(pArchivo, "%[^\n]\n", auxid);
+
+			if(retornoFscanf == 1){
+
+				printf("Se otorgo Su ID Correctamente\n");
+			}else{
+
+				printf("ERROR\n");
+			}
+			retorno = 1;
+		}
+		fclose(pArchivo);
+	}
+
+	return retorno;
+}
+
+int controller_guardarIdAutoincremental(char* path, int ultimoId){
+
+	FILE* pArchivo = NULL;
+	int retornoFprintf;
+	int retorno = 0;
+
+	if(path != NULL){
+
+		pArchivo = fopen(path, "w");
+
+		if (pArchivo != NULL){
+
+			retornoFprintf = fprintf(pArchivo, "%d\n", ultimoId);
+
+			if(retornoFprintf == sizeof(ultimoId)){
+
+				retorno = 1;
+			}
+		}
+		fclose(pArchivo);
+	}
+
+	return retorno;
+}
 
 
 

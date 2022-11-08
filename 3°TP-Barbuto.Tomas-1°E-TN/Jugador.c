@@ -231,45 +231,22 @@ int jug_getIdSeleccion(Jugador* this, int* idSeleccion){
 	return retorno;
 }
 
-int idAutoincremental(){ // Atomizar esta funcion.
+int idAutoincremental(){ // Atomizar esta funcion y poner mas lindo todo es un asco PA!!!.
 
-	int static idJugador;
+	static int idJugador;
 	char auxId[1000];
-	FILE* pArchivo = NULL;
-	int retornoFscanf;
-	int retornoFprintF;
+	static int flag = 0;
 
+	if(flag == 0){
 
-	pArchivo = fopen("ID.csv", "r");
+		if(controller_cargarIdAutoincremental("ID.csv", auxId)){
 
-	if(pArchivo != NULL){
-
-		retornoFscanf = fscanf(pArchivo, "%[^\n]\n", auxId);
-
-		if(retornoFscanf == 1){
-
-			printf("Se otorgo Su ID Correctamente\n");
-		}else{
-
-			printf("ERROR\n");
+			flag = 1;
+			idJugador = atoi(auxId);
 		}
 	}
-	fclose(pArchivo);
 
-	pArchivo = fopen("ID.csv", "w");
-
-	if (pArchivo != NULL){
-
-		idJugador = atoi(auxId);
-		idJugador++;
-
-		retornoFprintF = fprintf(pArchivo, "%d\n", idJugador);
-
-		printf("RETORNO %d\n", retornoFprintF);
-
-	}
-	fclose(pArchivo);
-	printf("'%d'", idJugador);
+	idJugador++;
 
 	return idJugador;
 }
@@ -295,7 +272,7 @@ int imprimirJugador(LinkedList* pArrayListaJugadores, int index){
 		&& jug_getPosicion(unJugador, auxPosicion)
 		&& jug_getNacionalidad(unJugador, auxNacionalidad)){
 
-			printf("|%10d | %25s | %10d | %20s | %10s  |\n", auxId, auxNombreCompleto, auxEdad,
+			printf("|%10d | %25s | %10d | %20s | %10s |\n", auxId, auxNombreCompleto, auxEdad,
 														auxPosicion,auxNacionalidad);
 			retorno = 1;
 		}

@@ -10,6 +10,8 @@ int main(){
 	setbuf(stdout,NULL);
 
 	int opcion;
+	int ultimoId;
+	int opcionListar;
     LinkedList* listaJugadores = ll_newLinkedList();
     LinkedList* listaSelecciones = ll_newLinkedList();
 
@@ -67,13 +69,37 @@ int main(){
     			break;
 
     		case 5:
-    			if(!controller_listarJugadores(listaJugadores)){
+    			if(getNumber(&opcionListar, "\nOpcion: ", "Opcion no valida\nREINGRESE: ", 1, 4)){
 
-    				printf("Anduve Mal\n");
-    			}
-    			if(!controller_listarSelecciones(listaSelecciones)){
+    				switch(opcionListar){
 
-				printf("Anduve Mal\n");
+    				case 1:
+						if(!controller_listarJugadores(listaJugadores)){
+
+							printf("ERROR\n");
+						}
+						break;
+
+    				case 2:
+						if(!controller_listarSelecciones(listaSelecciones)){
+
+							printf("ERROR\n");
+						}
+						break;
+
+    				case 3:
+    					if(!controller_ListarConvocados(listaJugadores)){
+
+    						printf("ERROR\n");
+    					}
+    					break;
+
+    				case 4:
+    					break;
+    				}
+    			}else{
+
+    				printf("ERROR\n");
     			}
     			break;
 
@@ -83,7 +109,6 @@ int main(){
     			break;
 
     		case 7:
-    			controller_ListarConvocados(listaJugadores);
 
     			break;
 
@@ -114,21 +139,27 @@ int main(){
     		case 10:
     			if(controller_guardarSeleccionesModoTexto("selecciones.csv", listaSelecciones)==1){
 
-    				printf("Se guardaron los cambios CorrectamenteSeleccion\n");
+    				printf("Se guardaron los cambios Correctamente Seleccion\n");
     			}else{
 
     				printf("Se rompio seleccion\n");
     			}
     			if(controller_guardarJugadoresModoTexto("jugadores.csv", listaJugadores)==1){
 
-    				printf("Se guardaron los cambios CorrectamenteJugador\n");
+    				printf("Se guardaron los cambios Correctamente Jugador\n");
 
     			}else{
 
     				printf("ERROR, llame al departamento de sistemas\n");
     			}
-    			break;
 
+    			ultimoId = idAutoincremental()-1;
+
+    			if(controller_guardarIdAutoincremental("ID.csv", ultimoId)){
+
+    				printf("Se Guardaron todos los archivos correctamente\n");
+    			}
+    			break;
     		case 11:
     			break;
     		}

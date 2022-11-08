@@ -15,3 +15,5 @@ int controller_ordenarSelecciones(LinkedList* pArrayListSeleccion);
 int controller_guardarSeleccionesModoTexto(char* path , LinkedList* pArrayListSeleccion);
 int controller_ConvocarJugadores(LinkedList* pArrayListSeleccion, LinkedList* pArrayListJugador);
 int controller_ListarConvocados(LinkedList* pArrayListJugador);
+int controller_cargarIdAutoincremental(char* path, char* auxid);
+int controller_guardarIdAutoincremental(char* path, int ultimoId);
