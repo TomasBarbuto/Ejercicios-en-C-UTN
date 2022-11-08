@@ -79,9 +79,11 @@ int main(){
 
     		case 6:
     			controller_ConvocarJugadores(listaSelecciones, listaJugadores);
+
     			break;
 
     		case 7:
+    			controller_ListarConvocados(listaJugadores);
 
     			break;
 

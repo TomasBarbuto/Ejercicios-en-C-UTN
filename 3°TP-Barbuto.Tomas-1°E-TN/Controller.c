@@ -653,7 +653,40 @@ int controller_ConvocarJugadores(LinkedList* pArrayListSeleccion, LinkedList* pA
 	return retorno;
 }
 
+int controller_ListarConvocados(LinkedList* pArrayListJugador){
 
+	int retorno = 0;
+	Jugador* Jugadores = NULL;
+	int convocado;
+
+	if(pArrayListJugador != NULL){
+
+		printf("|%10s | %25s | %10s | %20s | %10s  |\n", "ID", "NOMBRE JUGADOR", "EDAD",
+																"POSICION", "NACIONALIDAD");
+
+		for(int i = 0; i < ll_len(pArrayListJugador); i++){
+
+			Jugadores = ll_get(pArrayListJugador, i);
+
+			if(Jugadores != NULL){
+
+				jug_getIdSeleccion(Jugadores, &convocado);
+
+				if(convocado != 0){
+
+					if(!imprimirJugador(pArrayListJugador, i)){
+
+						retorno = 0;
+						break;
+					}
+					retorno = 1;
+				}
+			}
+		}
+	}
+
+	return retorno;
+}
 
 
 
