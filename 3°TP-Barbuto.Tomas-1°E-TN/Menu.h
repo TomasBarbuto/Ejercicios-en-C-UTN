@@ -11,5 +11,15 @@
 void menuPrincipal();
 void menuModificar();
 void menuListados();
+void menuConvocados();
+void menuArchivoBinario();
+void menuOrdenar();
+void menuOrdenarJugadores();
+void menuOrdenarSelecciones();
+int menuOrdenarListar(LinkedList* listaJugadores, LinkedList* listaSelecciones);
+int menuListar(LinkedList* listaJugadores, LinkedList* listaSelecciones);
+int menuConvocarJugadores(LinkedList* listaJugadores, LinkedList* listaSelecciones);
+int menuGuardarBinario(LinkedList* listaJugadores, LinkedList* listaSelecciones, int* FlagBinario);
+int menuCargarBinario(LinkedList* listaJugadores, LinkedList* listaSelecciones);
 
 #endif /* MENU_H_ */

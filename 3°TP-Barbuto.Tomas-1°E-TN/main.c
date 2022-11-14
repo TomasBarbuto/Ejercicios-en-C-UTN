@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "LinkedList.h"
 #include "Controller.h"
 #include "Jugador.h"
@@ -11,13 +12,14 @@ int main(){
 
 	int opcion;
 	int ultimoId;
-	int opcionListar;
+	int flagCargarArchivos = 0;
+	int flagArchivosBinarios = 0;
+	int flagGuardarArchivos = 0;
     LinkedList* listaJugadores = ll_newLinkedList();
     LinkedList* listaSelecciones = ll_newLinkedList();
 
     do{
     		menuPrincipal();
-
     		if(!getNumber(&opcion, "\nOpcion: ","\nOpcion no valida, REINGRESE: ", 1, 11)){
 
     			printf("ERROR AL SELECCIONAR UNA OPCION\n");
@@ -28,143 +30,180 @@ int main(){
     		switch(opcion){
 
     		case 1:
-    			//ANDUVO GOOD.
     				if(controller_cargarJugadoresDesdeTexto("jugadores.csv", listaJugadores)
     				&& controller_cargarSeleccionesDesdeTexto("selecciones.csv", listaSelecciones)){
 
-    					printf("Anduve bien");
+    					printf("Se cargaron los datos correctamente\n");
 
     				}else{
 
-    					printf("Se Rompio\n");
+    					printf("ERROR al cargar los archivos\n");
     				}
+    				flagCargarArchivos = 1;
+    				system("pause");
     			break;
 
     		case 2:
-    			if(controller_agregarJugador(listaJugadores)){
+    			if(flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
+					if(controller_agregarJugador(listaJugadores)){
 
-    				printf("Se agrego un jugador\n");
+						printf("Se agrego un jugador correctamente\n");
+					}
+    			}else{
+
+    				printf("Se debe cargar el archivo de jugadores antes de realizar un ALTA\n");
     			}
+    			system("pause");
     			break;
 
     		case 3:
-    			if(controller_editarJugador(listaJugadores)){
+    			if(flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
+					if(controller_editarJugador(listaJugadores)){
 
-    				printf("Se modifico un jugador\n\n");
+						printf("Se modifico un jugador correctamente\n");
+
+					}else{
+
+						printf("No ingreso un ID existente\nSera redirigido al menu principal\n\n");
+					}
     			}else{
 
-    				printf("No ingreso un ID existente\nSera redirigido al menu principal\n\n");
+    				printf("Se debe cargar el archivo de jugadores antes de realizar una Modificacion\n");
     			}
     			system("pause");
     			break;
 
     		case 4:
-    			if(controller_removerJugador(listaJugadores)){
+    			if(flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
+					if(controller_removerJugador(listaJugadores,listaSelecciones)){
 
-    				printf("Se elimino un jugador\n");
+						printf("Se elimino un jugador\n");
+					}else{
+
+						printf("ERROR al eliminar el Jugador, Reintente\n");
+					}
     			}else{
 
-    				printf("no elimine nada amigo\n");
+    				printf("Se debe cargar el archivo de jugadores antes de remover un jugador\n");
     			}
+    			system("pause");
     			break;
 
     		case 5:
-    			if(getNumber(&opcionListar, "\nOpcion: ", "Opcion no valida\nREINGRESE: ", 1, 4)){
+    			if(flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
 
-    				switch(opcionListar){
+    				if(!menuListar(listaJugadores, listaSelecciones)){
 
-    				case 1:
-						if(!controller_listarJugadores(listaJugadores)){
-
-							printf("ERROR\n");
-						}
-						break;
-
-    				case 2:
-						if(!controller_listarSelecciones(listaSelecciones)){
-
-							printf("ERROR\n");
-						}
-						break;
-
-    				case 3:
-    					if(!controller_ListarConvocados(listaJugadores)){
-
-    						printf("ERROR\n");
-    					}
-    					break;
-
-    				case 4:
-    					break;
+    					printf("ERROR al mostrar el menu\n");
     				}
     			}else{
 
-    				printf("ERROR\n");
+    				printf("No hay nada para mostrar, debe cargar los archivos previamente\n");
     			}
+    			system("pause");
     			break;
 
     		case 6:
-    			controller_ConvocarJugadores(listaSelecciones, listaJugadores);
+    			if(flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
 
+    				if(!menuConvocarJugadores(listaJugadores, listaSelecciones)){
+
+    					printf("ERROR al mostrar el menu\n");
+    				}
+    			}else{
+
+    				printf("No hay jugadores para convocar, debe cargar los archivos previamente\n");
+    			}
+    			system("pause");
     			break;
 
     		case 7:
+    			if(flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
 
+    				if(menuOrdenarListar(listaJugadores, listaSelecciones)){
+
+    				}
+    			}else{
+
+    				printf("No hay datos para realizar ordenamientos\n");
+    			}
+    			system("pause");
     			break;
 
     		case 8:
-    			if(controller_guardarJugadoresModoBinario("jugadores.bin", listaJugadores)){
+    			if(flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
 
-					printf("anduve bien en crear el .bin");
+					if(!menuGuardarBinario(listaJugadores, listaSelecciones, &flagArchivosBinarios)){
+						printf("ERROR al mostrar el menu\n");
+					}
 
-				}else{
+    			}else{
 
-					printf("Estoy en else");
-				}
+    				printf("Debe cargar los archivos previamente para poder generar un archivo binario\n");
+    			}
+    			system("pause");
     			break;
 
     		case 9:
-    			//se rompe revisar.
-    			if(controller_cargarJugadoresDesdeBinario("jugadores.bin", listaJugadores)){
+    			if(flagArchivosBinarios == 1 && flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
 
-    				printf("anduvo bien el cargar\n");
+    				if(menuCargarBinario(listaJugadores, listaSelecciones)){
 
+    				}
     			}else{
 
-    				printf("No existe tal archivo\n");
-
+    				printf("Debera de guardar una archivo binario previamente\n");
     			}
+    			system("pause");
     			break;
 
     		case 10:
-    			if(controller_guardarSeleccionesModoTexto("selecciones.csv", listaSelecciones)==1){
+    			if(flagCargarArchivos == 1 && ll_isEmpty(listaJugadores) == 0){
 
-    				printf("Se guardaron los cambios Correctamente Seleccion\n");
+					if(controller_guardarSeleccionesModoTexto("selecciones.csv", listaSelecciones)
+					&& controller_guardarJugadoresModoTexto("jugadores.csv", listaJugadores)){
+
+						flagGuardarArchivos = 1;
+						flagCargarArchivos = 0;
+						ll_clear(listaJugadores);
+						ll_clear(listaSelecciones);
+					}
+
+					ultimoId = idAutoincremental()-1;
+
+					if(controller_guardarIdAutoincremental("ID.csv", ultimoId)){
+
+						printf("Se Guardaron todos los archivos correctamente\n"
+							   "Si desea volver a manipular datos, debera volver a cargar los archivos\n");
+					}
     			}else{
 
-    				printf("Se rompio seleccion\n");
+    				printf("No cargo ningun archivo Previamente, no hay nada que guardar\n");
     			}
-    			if(controller_guardarJugadoresModoTexto("jugadores.csv", listaJugadores)==1){
-
-    				printf("Se guardaron los cambios Correctamente Jugador\n");
-
-    			}else{
-
-    				printf("ERROR, llame al departamento de sistemas\n");
-    			}
-
-    			ultimoId = idAutoincremental()-1;
-
-    			if(controller_guardarIdAutoincremental("ID.csv", ultimoId)){
-
-    				printf("Se Guardaron todos los archivos correctamente\n");
-    			}
+    			system("pause");
     			break;
     		case 11:
+    			if(flagGuardarArchivos == 0){
+
+    				getNumber(&opcion, "No se guardaron archivos\nSi desea salir confirme ingresando '11'"
+    						"de lo contrario ingrese '12' para continuar en el programa\n",
+    						"ERROR\nReingrese una opcion valida", 11, 12);
+
+    			}else{
+
+    				printf("Programa Finalizado, sus archivos se guardaron correctamente\n");
+    			}
+    			if(opcion == 11){
+
+					ll_deleteLinkedList(listaJugadores);
+					ll_deleteLinkedList(listaSelecciones);
+				}
     			break;
     		}
 
     	}while(opcion != 11);
+
+    printf("PROGRAMA FINALIZADO\n");
 
     return 0;
 }

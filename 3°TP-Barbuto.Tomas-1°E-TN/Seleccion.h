@@ -25,6 +25,9 @@ int selec_getConvocados(Seleccion* this, int* convocados);
 
 int imprimirSeleccion(LinkedList* pArrayListaSelecciones, int index);
 int validarExistenciaDeSeleccion(LinkedList* pArrayListaSelecciones, int idParam);
+int buscarNombreDeConfederacion(LinkedList *pArrayListSeleccion, int idSeleccion, char pConfederacion[]);
+int buscarNombreDeSeleccion(LinkedList *pArrayListSeleccion, int idSeleccion, char pSeleccion[]);
+int selec_ordenarPorConfederacion(void* elementoA, void* elementoB);
 
 
 #endif // selec_H_INCLUDED

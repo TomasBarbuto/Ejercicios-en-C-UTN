@@ -7,7 +7,11 @@
 #include "Seleccion.h"
 
 
-
+/**
+ * \brief Reserva espacio en memoria para el tipo de dato Seleccion.
+ * \param VOID
+ * \return direccion de memoria de un dato seleccion.
+**/
 Seleccion* selec_new(){
 
 	Seleccion *nuevaSeleccion = NULL;
@@ -26,7 +30,11 @@ Seleccion* selec_new(){
 }
 
 
-
+/**
+ * \brief Reserva espacio en memoria para el tipo de dato Seleccion.
+ * \param 4 punteros a char.
+ * \return direccion de memoria de un dato seleccion.
+**/
 Seleccion* selec_newParametros(char* idStr, char* paisStr, char* confederacionStr, char* convocadosStr){
 
 	Seleccion* nuevaSeleccion = selec_new();
@@ -44,21 +52,28 @@ Seleccion* selec_newParametros(char* idStr, char* paisStr, char* confederacionSt
 			strncpy(nuevaSeleccion->pais, paisStr, 30);
 			strncpy(nuevaSeleccion->confederacion, confederacionStr, 30);
 
-
 		}
 	}
 
 	return nuevaSeleccion;
 }
 
-
+/**
+ * \brief Libera espacio de memoria.
+ * \param puntero a seleccion.
+ * \return VOID
+**/
 void selec_delete(Seleccion *this){
 
 	free(this);
 }
 
 
-///OK
+/**
+ * \brief obtiene un dato cargado en el campo seleccion.
+ * \param puntero a seleccion, puntero a int
+ * \return int 1 Bien, 0 ERROR.
+**/
 int selec_getId(Seleccion* this, int* id){
 
 	int retorno = 0;
@@ -74,7 +89,11 @@ int selec_getId(Seleccion* this, int* id){
 }
 
 
-///OK
+/**
+ * \brief obtiene un dato cargado en el campo seleccion.
+ * \param puntero a seleccion, puntero a char.
+ * \return int 1 Bien, 0 ERROR.
+**/
 int selec_getPais(Seleccion* this, char* pais){
 
 	int retorno = 0;
@@ -89,14 +108,18 @@ int selec_getPais(Seleccion* this, char* pais){
 	return retorno;
 }
 
-///OK
+/**
+ * \brief obtiene un dato cargado en el campo seleccion.
+ * \param puntero a seleccion, puntero a char.
+ * \return int 1 Bien, 0 ERROR.
+**/
 int selec_getConfederacion(Seleccion* this, char* confederacion){
 
 	int retorno = 0;
 
 	if (this != NULL && confederacion != NULL){
 
-		strncpy(confederacion, this->pais, 30);
+		strncpy(confederacion, this->confederacion, 30);
 		retorno = 1;
 		//LA FLECHA ES UN PUNTERO A UNA ESTRUCTURA.
 	}
@@ -104,7 +127,11 @@ int selec_getConfederacion(Seleccion* this, char* confederacion){
 	return retorno;
 }
 
-///OK
+/**
+ * \brief Carga un dato de tipo int en el campo convocado de seleccion.
+ * \param puntero a seleccio, int.
+ * \return int 1 Bien, 0 ERROR.
+**/
 int selec_setConvocados(Seleccion* this, int convocados){
 
 	int retorno = 0;
@@ -119,7 +146,11 @@ int selec_setConvocados(Seleccion* this, int convocados){
 }
 
 
-///OK
+/**
+ * \brief obtiene un dato cargado en el campo seleccion.
+ * \param puntero a seleccion, puntero a int.
+ * \return int 1 Bien, 0 ERROR.
+**/
 int selec_getConvocados(Seleccion* this, int* convocados){
 
 	int retorno = 0;
@@ -133,6 +164,11 @@ int selec_getConvocados(Seleccion* this, int* convocados){
 	return retorno;
 }
 
+/**
+ * \brief imprime una seleccion extraida de un puntero a linkedList.
+ * \param puntero a linkedList, int.
+ * \return int 1 Bien, 0 ERROR.
+**/
 int imprimirSeleccion(LinkedList* pArrayListaSelecciones, int index){
 
 	int retorno = 0;
@@ -160,6 +196,11 @@ int imprimirSeleccion(LinkedList* pArrayListaSelecciones, int index){
 	return retorno;
 }
 
+/**
+ * \brief valida existencia de un dato de tipo seleccion en puntero a linkedList.
+ * \param puntero a linkedList, int
+ * \return int, -1 ERROR, >= 0 indice.
+**/
 int validarExistenciaDeSeleccion(LinkedList* pArrayListaSelecciones, int idParam){
 
 	int retorno = -1;
@@ -186,4 +227,103 @@ int validarExistenciaDeSeleccion(LinkedList* pArrayListaSelecciones, int idParam
 	return retorno;
 }
 
+/**
+ * \brief obtiene el string del nombre de la confederacion a la que pertenece cada seleccion.
+ * \param linkedList* pArrayListSeleccion, int, puntero a char.
+ * \return int 1 Bien, 0 ERROR.
+**/
+int buscarNombreDeConfederacion(LinkedList *pArrayListSeleccion, int idSeleccion, char pConfederacion[]){
+
+	int retorno = 0;
+	int auxIdSeleccion;
+	char auxConfederation[30];
+	Seleccion* auxSeleccion = NULL;
+	if (pArrayListSeleccion != NULL && pConfederacion != NULL && idSeleccion > 0){
+
+		for (int i = 0; i < ll_len(pArrayListSeleccion); i++){
+
+			auxSeleccion = (Seleccion*) ll_get(pArrayListSeleccion, i);
+
+			if (auxSeleccion != NULL){
+
+				if (selec_getId(auxSeleccion, &auxIdSeleccion)){
+
+					if (auxIdSeleccion == idSeleccion
+					&& selec_getConfederacion(auxSeleccion, auxConfederation)){
+
+						strcpy(pConfederacion, auxConfederation);
+						retorno = 1;
+					}
+				}
+			}
+		}
+	}
+	return retorno;
+}
+
+
+/**
+ * \brief obtiene el string del nombre de la seleccion segun el id.
+ * \param linkedList* pArrayListSeleccion, int, puntero a char.
+ * \return int 1 Bien, 0 ERROR.
+**/
+int buscarNombreDeSeleccion(LinkedList *pArrayListSeleccion, int idSeleccion, char pSeleccion[]){
+
+	int retorno = 0;
+	int auxIdSeleccion;
+	char auxNombreSeleccion[30];
+	Seleccion* auxSeleccion = NULL;
+
+	if (pArrayListSeleccion != NULL && pSeleccion != NULL && idSeleccion > 0){
+
+		for (int i = 0; i < ll_len(pArrayListSeleccion); i++){
+
+			auxSeleccion = (Seleccion*) ll_get(pArrayListSeleccion, i);
+
+			if (auxSeleccion != NULL){
+
+				if (selec_getId(auxSeleccion, &auxIdSeleccion)){
+
+					if (auxIdSeleccion == idSeleccion
+					&& selec_getPais(auxSeleccion, auxNombreSeleccion)){
+
+						strcpy(pSeleccion, auxNombreSeleccion);
+						retorno = 1;
+					}
+				}
+			}
+		}
+	}
+	return retorno;
+}
+
+/**
+ * \brief selecciona dos punteros y evalua cual es mayor.
+ * \param puntero a void, puntero a void
+ * \return int, 1 bien, 0 ERROR.
+**/
+int selec_ordenarPorConfederacion(void* elementoA, void* elementoB){
+	int retorno = 0;
+	char confederacionA[30];
+	char confederacionB[30];
+	Seleccion* auxSeleccionA;
+	Seleccion* auxSeleccionB;
+
+	auxSeleccionA = (Seleccion*)elementoA;
+	auxSeleccionB = (Seleccion*)elementoB;
+
+	if(selec_getConfederacion(auxSeleccionA, confederacionA)
+	&& selec_getConfederacion(auxSeleccionB, confederacionB)){
+
+		if(stricmp(confederacionA, confederacionB) > 0 ){
+
+			retorno = 1;
+
+		}else if(stricmp(confederacionA, confederacionB) < 0){
+
+			retorno = -1;
+		}
+	}
+	 return retorno;
+}
 

@@ -40,5 +40,10 @@ int jug_getIdSeleccion(Jugador* this, int* idSeleccion);
 int idAutoincremental();
 int imprimirJugador(LinkedList* pArrayListaJugadores, int index);
 int validarExistenciaDeJugador(LinkedList* pArrayJugadores, int idParam);
+int imprimirJugadorSeleccion(LinkedList* pArrayListaJugadores, LinkedList* pArrayListaSeleccion, int index);
+
+int jug_ordenarPorNacionalidad(void* elementoA, void* elementoB);
+int jug_ordenarPorNombre(void* elementoA, void* elementoB);
+int jug_ordenarPorEdad(void* elementoA, void* elementoB);
 
 #endif // jug_H_INCLUDED
