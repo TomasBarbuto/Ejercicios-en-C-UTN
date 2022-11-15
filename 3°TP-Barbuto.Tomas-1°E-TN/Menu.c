@@ -129,6 +129,11 @@ void menuOrdenar(){
 		   "3-Salir\n");
 }
 
+/**
+ * \brief Muestra un menu con opciones.
+ * \param VOID
+ * \return VOID
+**/
 void elegirNacionalidad(){
 
 	printf("\nSeleccione la nacionalidad que desea\n"
@@ -166,6 +171,11 @@ void elegirNacionalidad(){
 			"32-URUGUAY\n");
 }
 
+/**
+ * \brief Muestra un menu con opciones.
+ * \param VOID
+ * \return VOID
+**/
 void elegirPosicion(){
 
 	printf("\nSeleccione la nacionalidad que desea\n"
@@ -184,7 +194,7 @@ void elegirPosicion(){
 			"13- Delantero centro\n");
 }
 /**
- * \brief Muestra un menu con opciones que se pueden elegir.
+ * \brief Muestra un menu con opciones que se pueden elegir para ordenar y listar.
  * \param LinkedList* listaJugadores, LinkedList* listaSelecciones
  * \return int 1 bien, 0 ERROR.
 **/
@@ -239,6 +249,11 @@ int menuOrdenarListar(LinkedList* listaJugadores, LinkedList* listaSelecciones){
 	return retorno;
 }
 
+/**
+ * \brief Muestra un menu con opciones que se pueden elegir para listar.
+ * \param LinkedList* listaJugadores, LinkedList* listaSelecciones
+ * \return int 1 bien, 0 ERROR.
+**/
 int menuListar(LinkedList* listaJugadores, LinkedList* listaSelecciones){
 
 	int retorno = 0;
@@ -299,6 +314,11 @@ int menuListar(LinkedList* listaJugadores, LinkedList* listaSelecciones){
 	return retorno;
 }
 
+/**
+ * \brief Muestra un menu con opciones que se pueden elegir para convocar o revocar.
+ * \param LinkedList* listaJugadores, LinkedList* listaSelecciones
+ * \return int 1 bien, 0 ERROR.
+**/
 int menuConvocarJugadores(LinkedList* listaJugadores, LinkedList* listaSelecciones){
 
 	int retorno = 0;
@@ -356,6 +376,11 @@ int menuConvocarJugadores(LinkedList* listaJugadores, LinkedList* listaSeleccion
 		return retorno;
 }
 
+/**
+ * \brief Muestra un menu con opciones que se pueden elegir para guardar un archivo binario
+ * \param LinkedList* listaJugadores, LinkedList* listaSelecciones, int
+ * \return int 1 bien, 0 ERROR.
+**/
 int menuGuardarBinario(LinkedList* listaJugadores, LinkedList* listaSelecciones, int* FlagBinario){
 
 	int retorno = 0;
@@ -454,6 +479,11 @@ int menuGuardarBinario(LinkedList* listaJugadores, LinkedList* listaSelecciones,
 	return retorno;
 }
 
+/**
+ * \brief Muestra un menu con opciones que se pueden elegir para cargar un archivo binario.
+ * \param LinkedList* listaJugadores, LinkedList* listaSelecciones
+ * \return int 1 bien, 0 ERROR.
+**/
 int menuCargarBinario(LinkedList* listaJugadores, LinkedList* listaSelecciones){
 
 	int retorno = 0;

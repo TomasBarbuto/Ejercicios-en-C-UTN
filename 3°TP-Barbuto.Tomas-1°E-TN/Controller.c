@@ -1201,6 +1201,11 @@ int controller_cargarJugadoresPorConfederacionBinario(char *path, LinkedList* pA
 	return retorno;
 }
 
+/**
+ * \brief Crea una lista de jugadores ingresados, mostrando si fueron o no convocados.
+ * \param pArrayListJugador LinkedList*
+ * \return int, 1 bien, 0 ERROR.
+**/
 int controller_listarJugadoresNoConvocados(LinkedList* pArrayListJugador){
 
 	int retorno = 0;

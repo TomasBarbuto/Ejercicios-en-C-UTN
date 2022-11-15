@@ -539,6 +539,11 @@ int jug_ordenarPorEdad(void* jugadorA, void* jugadorB){
 	 return retorno;
 }
 
+/**
+ * \brief despliega opciones y se debera elegir la opcion que se desee ingresando un entero
+ * \param puntero a char.
+ * \return int, 1 bien, 0 ERROR.
+**/
 int jug_elegirNacionalidad(char pSeleccionElegida[]){
 
 	int retorno = 0;
@@ -690,7 +695,11 @@ int jug_elegirNacionalidad(char pSeleccionElegida[]){
 
 
 
-
+/**
+ * \brief despliega opciones y se debera elegir la opcion que se desee ingresando un entero
+ * \param puntero a char.
+ * \return int, 1 bien, 0 ERROR.
+**/
 int jug_elegirPosicion(char pPosicionElegida[]){
 
 	int retorno = 0;
